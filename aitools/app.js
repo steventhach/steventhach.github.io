@@ -71,7 +71,7 @@
     if (!hw) { var n = d.createElement("p"); n.className = "sl-empty"; n.textContent = "No mic needed for an all-AI voice. The booth is there if that changes."; box.appendChild(n); }
     var s = d.getElementById("slate"); s.classList.remove("is-on"); void s.offsetWidth; s.classList.add("is-on");
     var rs = d.getElementById("res-sw"), rh = d.getElementById("res-hw"), lg = d.getElementById("res-legal");
-    rs.href = sw[0].href; rs.setAttribute("data-vendor", sw[0].id); rs.firstChild.nodeValue = "Visit " + sw[0].short + " "; rs.hidden = false;
+    rs.href = sw[0].href; rs.setAttribute("data-vendor", sw[0].id); rs.rel = sw[0].aff ? "sponsored noopener" : "noopener"; if (sw[0].aff) rs.setAttribute("data-affiliate", "1"); else rs.removeAttribute("data-affiliate"); lg.textContent = lg.getAttribute(sw[0].aff ? "data-aff" : "data-noaff"); rs.firstChild.nodeValue = "Visit " + sw[0].short + " "; rs.hidden = false;
     if (hw) { rh.href = hw.href; rh.firstChild.nodeValue = "See " + hw.short + " on Amazon "; rh.hidden = false; } else rh.hidden = true;
     lg.hidden = false; share.disabled = false;
     last = "My AI creator stack (" + L.make[a.make] + "): " + sw.map(function (x) { return x.short; }).join(" + ") + (hw ? " + " + hw.short : "") + ". Built on Tally Light.";

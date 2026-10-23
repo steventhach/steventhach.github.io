@@ -36,7 +36,7 @@ h3{font-size:22px;letter-spacing:-.01em}
 .btn-amz{background:var(--amber);color:#1A1204;box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}.btn-amz:hover{background:#FFC56A;color:#000}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line2)}.btn-ghost:hover{border-color:var(--ink2);color:#fff}
 .btn-sm{padding:10px 14px;font-size:13.5px;border-radius:9px}.btn-block{width:100%}
-.noaff,.paid{display:block;margin-top:8px;font:500 10.5px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:center}
+.noaff,.paid,.afflink{display:block;margin-top:8px;font:500 10.5px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:center}
 .paid{color:#C79A4E}
 /* hero */
 .hero{padding:64px 0 0;overflow:hidden}
@@ -190,7 +190,7 @@ h3{font-size:22px;letter-spacing:-.01em}
 .take{display:flex;gap:10px;align-items:flex-start;margin:14px 0 0;font-size:14.5px;color:var(--ink2)}.take b{color:var(--ink)}
 .av{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;font:700 13px/1 var(--disp);color:#111}
 .av-rue{background:var(--a)}.av-mack{background:var(--amber)}.av-ivy{background:var(--v);color:#fff}
-.dr-cta{margin:16px 0 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.dr-cta .noaff,.dr-cta .paid{margin:0;text-align:left}
+.dr-cta{margin:16px 0 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.dr-cta .noaff,.dr-cta .paid,.dr-cta .afflink{margin:0;text-align:left}
 /* booth */
 .mic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .mic-card .frame{background:#101216}
@@ -252,3 +252,5 @@ section[id],li[id],article[id]{scroll-margin-top:84px}
 
 .tl-row:nth-child(1) .tl-bar:after{left:2%;right:64%}.tl-row:nth-child(2) .tl-bar:after{left:4%;right:18%}.tl-row:nth-child(3) .tl-bar:after{left:4%;right:8%}
 .tl-row:nth-child(4) .tl-bar:after{left:22%;right:30%}.tl-row:nth-child(5) .tl-bar:after{left:58%;right:4%}.tl-row:nth-child(6) .tl-bar:after{left:10%;right:6%}.tl-row:nth-child(7) .tl-bar:after{left:4%;right:18%}
+
+.afflink{color:var(--amber,#F5A524);text-transform:none;letter-spacing:.02em}
