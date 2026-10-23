@@ -291,3 +291,7 @@ section{padding:72px 0}
 .album:hover .disc{transform:rotate(200deg) translateX(14px)}
 .chap-disc{animation:none;transition:transform 1s cubic-bezier(.2,.8,.2,1)}.chap:hover .chap-disc{transform:rotate(180deg)}
 .forgot-in:before{animation:none}
+
+/* stagger index and host accents as classes (no inline style attributes, so the CSP stays strict) */
+.t3.i1{--i:1}.t3.i2{--i:2}.t3.i3{--i:3}
+.acc-ff2e93{--acc:#FF2E93}.acc-33b5ff{--acc:#33B5FF}.acc-a98bff{--acc:#A98BFF}

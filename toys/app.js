@@ -3,6 +3,9 @@
   "use strict";
   var d = document, root = d.documentElement;
   root.classList.remove("no-js"); root.classList.add("js");
+  // SVG animation offsets and tag pivots live in data attributes (CSP forbids inline style attributes); apply via CSSOM.
+  Array.prototype.forEach.call(d.querySelectorAll("[data-delay]"), function (el) { el.style.animationDelay = el.getAttribute("data-delay"); });
+  Array.prototype.forEach.call(d.querySelectorAll("[data-origin]"), function (el) { el.style.transformOrigin = el.getAttribute("data-origin"); });
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Reveal on scroll
