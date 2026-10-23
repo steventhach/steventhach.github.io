@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://steventhach.github.io/sitemap.xml
+Sitemap: https://worthitedit.com/sitemap.xml
