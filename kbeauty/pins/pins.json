@@ -1,0 +1,33 @@
+{
+ "note": "Unpublished drafts. Destination carries ?src=pinterest (approved attribution). Our own abstract art only; no product images, prices or ratings.",
+ "pins": [
+  {
+   "image": "pins/pin-1-decoded.png",
+   "title": "Viral K-Beauty, Decoded: 10 Korean Skincare Picks and Who Should Skip Them",
+   "description": "Ten of the most-searched Korean skincare picks, read from the label up: PDRN serums, toner pads, snail mucin, overnight masks and gift sets. Who each one is for, who should skip it, and what independent reviewers flag. Plus a 3-question Skin Finder. #ad (paid links) As an Amazon Associate I earn from qualifying purchases.",
+   "alt": "Holographic K-pop-album style pin from Seoul Annotated: Vol. 10 The Decoded Era cover with a CD, a NEW sticker and the headline K-beauty, decoded. Original art, no product or person shown.",
+   "destination": "https://steventhach.github.io/kbeauty/?src=pinterest"
+  },
+  {
+   "image": "pins/pin-2-pdrn.png",
+   "title": "PDRN Serum, Decoded: Read the Ingredient List Before You Buy the Trend",
+   "description": "PDRN is the K-beauty ingredient with the steepest search curve. Before you add one to cart, check where it comes from (salmon or plant) and where DNA actually sits on the ingredient list. Our label-first guide compares three of the most-searched PDRN picks: who each is for and who should skip it. #ad (paid links) As an Amazon Associate I earn from qualifying purchases.",
+   "alt": "Pin with three glossy photocards numbered 01 to 03 for three PDRN picks and the headline PDRN, decoded. Read this first. Original art, no product photos.",
+   "destination": "https://steventhach.github.io/kbeauty/?src=pinterest"
+  },
+  {
+   "image": "pins/pin-3-gifts.png",
+   "title": "K-Beauty Gift Ideas: Skip the Mystery Box, Give These Instead",
+   "description": "Korean skincare gifts that unbox well and don't make you guess someone's skin type: a numbered PDRN starter kit, a collagen mini set, an overnight hydrogel mask and the lip mask everyone forgets. Real dates to plan around: Black Friday Nov 27, Cyber Monday Nov 30, Christmas Dec 25. #ad (paid links) As an Amazon Associate I earn from qualifying purchases.",
+   "alt": "Pin with three glossy gift photocards and a gift-ready sticker, headline Skip the mystery box. Original art, no product photos.",
+   "destination": "https://steventhach.github.io/kbeauty/?src=pinterest"
+  },
+  {
+   "image": "pins/pin-4-cut-step.png",
+   "title": "Toner Pads vs Toner vs Essence: Cut the K-Beauty Step You Don't Need",
+   "description": "Toner pads, calming toners and snail essence get stacked together online, but on paper they do three different jobs: exfoliate, calm and hydrate. Pick the one you need. Our guide breaks down three viral picks, who each is for and who should skip it. #ad (paid links) As an Amazon Associate I earn from qualifying purchases.",
+   "alt": "Pin styled as an album tracklist: toner pad, calming toner, snail essence, pick one job, with the headline Pads or bottle? Cut a step.",
+   "destination": "https://steventhach.github.io/kbeauty/?src=pinterest"
+  }
+ ]
+}
