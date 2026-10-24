@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#1A1C1E"/>
+<text x="80" y="160" fill="#F5C84C" font-family="sans-serif" font-size="36" letter-spacing="6">COUNTER PROOF</text>
+<text x="80" y="320" fill="#F4F0E8" font-family="sans-serif" font-size="72" font-weight="700">Vertical waffle.</text>
+<text x="80" y="410" fill="#C8CDD2" font-family="sans-serif" font-size="40">Four Ninja demos for the counter.</text>
+<rect x="400" y="520" width="200" height="480" rx="24" fill="#F5C84C"/>
+<g stroke="#1A1C1E" stroke-width="4">
+  <line x1="430" y1="580" x2="570" y2="580"/><line x1="430" y1="660" x2="570" y2="660"/>
+  <line x1="430" y1="740" x2="570" y2="740"/><line x1="430" y1="820" x2="570" y2="820"/>
+  <line x1="480" y1="540" x2="480" y2="960"/><line x1="520" y1="540" x2="520" y2="960"/>
+</g>
+<ellipse cx="500" cy="1020" rx="140" ry="28" fill="#C8CDD2"/>
+<text x="80" y="1280" fill="#E85D4C" font-family="sans-serif" font-size="28">Amazon Associates · listing facts only</text>
+<text x="80" y="1380" fill="#C8CDD2" font-family="sans-serif" font-size="24">worthitedit.com/ninja-kitchen</text>
+</svg>
