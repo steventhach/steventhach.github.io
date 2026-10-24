@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<rect width="1000" height="1500" fill="#1C2228"/>
+<text x="80" y="160" fill="#7BC4A8" font-family="sans-serif" font-size="36" letter-spacing="6">SIDE CLEARED</text>
+<text x="80" y="320" fill="#F4F6F8" font-family="sans-serif" font-size="64" font-weight="700">Clear the counter.</text>
+<text x="80" y="400" fill="#8B939C" font-family="sans-serif" font-size="36">Use the fridge side.</text>
+<rect x="400" y="520" width="80" height="280" rx="8" fill="#F4F6F8"/>
+<rect x="520" y="580" width="160" height="40" rx="4" fill="#8B939C"/>
+<rect x="520" y="660" width="160" height="40" rx="4" fill="#8B939C"/>
+<rect x="520" y="740" width="160" height="40" rx="4" fill="#8B939C"/>
+<circle cx="500" cy="600" r="12" fill="#E24B3B"/>
+<text x="80" y="1280" fill="#E24B3B" font-family="sans-serif" font-size="26">Amazon Associates · listing facts only</text>
+<text x="80" y="1380" fill="#8B939C" font-family="sans-serif" font-size="22">worthitedit.com/fridge-shelf</text>
+</svg>
