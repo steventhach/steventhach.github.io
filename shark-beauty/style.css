@@ -1,11 +1,11 @@
 /* Gloss Lab — Shark Glossi */
-/* Counter Proof: demo-kitchen · charcoal / steel / butter / cream / coral. Unbounded + Inter + JetBrains Mono. */
-@font-face{font-family:Unbounded;src:url(fonts/unbounded.woff2) format("woff2");font-weight:400 700;font-display:swap}
-@font-face{font-family:Inter;src:url(fonts/inter.woff2) format("woff2");font-weight:300 900;font-display:swap}
-@font-face{font-family:"JetBrains Mono";src:url(fonts/jetbrainsmono.woff2) format("woff2");font-weight:400 700;font-display:swap}
+/* Gloss Lab: vanity shelf · Young Serif + Figtree + Courier Prime. */
+@font-face{font-family:"Young Serif";src:url(fonts/youngserif.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Figtree;src:url(fonts/figtree.woff2) format("woff2");font-weight:300 900;font-display:swap}
+@font-face{font-family:"Courier Prime";src:url(fonts/courierprime.woff2) format("woff2");font-weight:400;font-display:swap}
 
 :root{--mul:#1C2228;--plum:#2A323A;--deep:#12161A;--oat:#F4F6F8;--oat2:#E8EBEE;--lin:#FAFBFC;--emb:#E24B6A;--emb2:#C43A2C;--hon:#E8A0B0;--rose:#8B939C;--moss:#C5CAD0;--thr:#E24B6A;
---ink:#12161A;--mute:#6B737C;--line:#D5D9DE;--r:12px;--disp:Unbounded,system-ui,sans-serif;--acc:Unbounded,system-ui,sans-serif;--body:Inter,system-ui,sans-serif;--mono:"JetBrains Mono","Courier New",monospace}
+--ink:#12161A;--mute:#6B737C;--line:#D5D9DE;--r:12px;--disp:"Young Serif",Georgia,serif;--acc:"Young Serif",Georgia,serif;--body:Figtree,system-ui,sans-serif;--mono:"Courier Prime","Courier New",monospace}
 *{box-sizing:border-box}[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font:400 17px/1.6 var(--body);color:var(--ink);background:var(--lin);
