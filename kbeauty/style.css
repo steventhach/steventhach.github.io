@@ -207,7 +207,7 @@ section{padding:72px 0}
 .chap-disc{flex:none;width:96px;height:96px;animation:spin 12s linear infinite}.chap-disc svg{width:100%;height:100%}
 .chap-head .intro{margin:10px 0 0;color:#4A3D6B}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.card{display:grid;grid-template-columns:230px 1fr;gap:22px;background:#fff;border-radius:28px;padding:18px;box-shadow:var(--sh);align-items:start}
+.card{display:grid;grid-template-columns:230px minmax(0,1fr);gap:22px;background:#fff;border-radius:28px;padding:18px;box-shadow:var(--sh);align-items:start}
 .card-body h3{font:800 20px/1.2 var(--d);letter-spacing:-.02em;margin:0 0 8px}
 .card .num{background:var(--ink);color:#fff;border-radius:99px;padding:3px 8px}
 .card .hook{font-weight:700;margin:0 0 8px}.card .why{font-size:14.5px;color:#3E325F;margin:0 0 10px}
@@ -296,9 +296,13 @@ section{padding:72px 0}
 .t3.i1{--i:1}.t3.i2{--i:2}.t3.i3{--i:3}
 .acc-ff2e93{--acc:#FF2E93}.acc-33b5ff{--acc:#33B5FF}.acc-a98bff{--acc:#A98BFF}
 
-/* Official YouTube embeds — quiet caption */
-.vid-wrap{margin:.6rem 0 1rem;max-width:100%}
-.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#1a0f18;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
-.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;color:rgba(255,255,255,.45);font-weight:400}
-.vid-cap a{color:rgba(255,46,147,.75);text-decoration:underline;text-underline-offset:2px}
+/* YouTube embeds — quiet caption under player; never a badge.
+   Place .vid-wrap inside the text column, never as a sibling grid child of the art column. */
+.vid-wrap{margin:.65rem 0 .85rem;max-width:100%;min-width:0;width:100%}
+.vid-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;max-width:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.72rem;line-height:1.35;opacity:.55;font-weight:400}
+.vid-cap a{text-decoration:underline;text-underline-offset:2px}
+
+.card-body,.pitem-top>div{min-width:0}
+.pitem-top{grid-template-columns:220px minmax(0,1fr)}
