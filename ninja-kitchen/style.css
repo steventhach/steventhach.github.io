@@ -230,3 +230,5 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .av-jules{background:#F5C84C;color:#1A1C1E}.av-kai{background:#C8CDD2;color:#1A1C1E}.av-rhea{background:#E85D4C;color:#fff}
 .ct-grid{grid-template-columns:repeat(4,1fr)}
 @media (max-width:900px){.ct-grid{grid-template-columns:repeat(2,1fr)}.lab-grid{grid-template-columns:1fr}}
+
+.sec-ltd .sec-k .sk-n{background:var(--accent,#7BC4A8);color:#111}

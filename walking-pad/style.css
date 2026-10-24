@@ -226,3 +226,5 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .sec-ind .ws th,.sec-ind .ws td{border-color:color-mix(in srgb,var(--lin) 22%,transparent);color:var(--lin)}
 .sec-ind .ws a{color:var(--hon)}
 @media (max-width:720px){.who-grid{grid-template-columns:1fr}}
+
+.sec-ltd .sec-k .sk-n{background:var(--accent,#7BC4A8);color:#111}
