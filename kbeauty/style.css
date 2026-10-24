@@ -295,3 +295,10 @@ section{padding:72px 0}
 /* stagger index and host accents as classes (no inline style attributes, so the CSP stays strict) */
 .t3.i1{--i:1}.t3.i2{--i:2}.t3.i3{--i:3}
 .acc-ff2e93{--acc:#FF2E93}.acc-33b5ff{--acc:#33B5FF}.acc-a98bff{--acc:#A98BFF}
+
+/* Official YouTube embeds — quiet caption */
+.vid-wrap{margin:.6rem 0 1rem;max-width:100%}
+.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#1a0f18;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;color:rgba(255,255,255,.45);font-weight:400}
+.vid-cap a{color:rgba(255,46,147,.75);text-decoration:underline;text-underline-offset:2px}
