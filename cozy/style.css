@@ -217,3 +217,6 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 
 .lab-grid-ltd{grid-template-columns:minmax(0,560px);justify-content:start;max-width:560px}
 .sh-bed{background:var(--hon);color:var(--mul)}
+
+.lab-grid-paths{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;max-width:960px}
+@media (max-width:800px){.lab-grid-paths{grid-template-columns:1fr}}
