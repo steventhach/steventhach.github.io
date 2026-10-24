@@ -221,4 +221,16 @@
         function () { msg.textContent = "Copy this link: " + link; });
     } else { msg.textContent = "Copy this link: " + link; }
   });
+
+  // Spice: soft lift when product panels enter the stand (cabin lights on)
+  var pops = d.querySelectorAll(".card-pop");
+  if (pops.length && "IntersectionObserver" in window && !reduce) {
+    var popIO = new IntersectionObserver(function (es) {
+      es.forEach(function (x) { x.target.classList.toggle("is-on-stand", x.isIntersecting); });
+    }, { rootMargin: "-8% 0px -12% 0px", threshold: 0.2 });
+    pops.forEach(function (el) { popIO.observe(el); });
+  } else {
+    pops.forEach(function (el) { el.classList.add("is-on-stand"); });
+  }
+
 })();
