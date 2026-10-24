@@ -281,8 +281,12 @@ section[id],article[id],li[id]{scroll-margin-top:84px}
 .c1{left:-8px;top:8%}.c2{right:-8px;top:30%}.c3{right:-8px;top:52%;bottom:auto}.callout span{font-size:10px}
 .tblock b{font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}.tblock div{padding:5px 7px}}
 
-.vid-wrap{margin:.55rem 0 .9rem;max-width:100%}
-.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
-.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;opacity:.55}
+/* YouTube embeds — quiet caption under player; never a badge.
+   Place .vid-wrap inside the text column, never as a sibling grid child of the art column. */
+.vid-wrap{margin:.65rem 0 .85rem;max-width:100%;min-width:0;width:100%}
+.vid-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;max-width:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.72rem;line-height:1.35;opacity:.55;font-weight:400}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
+
+.dr-b{grid-template-columns:300px minmax(0,1fr)}.dr-main,.ds-b{min-width:0}
