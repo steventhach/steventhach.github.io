@@ -234,3 +234,16 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;opacity:.55}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
+
+/* Seated elliptical chapter — single card, theme-native pace pulse */
+.lab-grid-1{grid-template-columns:1fr;max-width:720px}
+.sec-elliptical .lab-card{outline-color:var(--mint, #7EC8A3)}
+.sh-elliptical{background:#DCEEE6;color:#1C4A3A}
+.usage{margin:.55rem 0 .85rem;font-size:14.5px;line-height:1.55;color:var(--mute,#7A5F66)}
+.lab-card .vid-wrap{min-width:0}
+.lc-b{min-width:0}
+.dr-main{min-width:0}
+@media (prefers-reduced-motion:no-preference){
+  .sec-elliptical .lab-card.reveal.in{transition:opacity .6s,transform .6s,box-shadow .6s}
+  .sec-elliptical .lab-card.reveal.in:hover{box-shadow:0 1px 0 var(--line),0 28px 48px -28px rgba(28,74,58,.35)}
+}
