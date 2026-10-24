@@ -221,10 +221,12 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .lab-grid-paths{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;max-width:960px}
 @media (max-width:800px){.lab-grid-paths{grid-template-columns:1fr}}
 
-.vid-wrap{margin:.55rem 0 .9rem;max-width:100%}
-.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
-.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;opacity:.55}
+/* YouTube embeds — quiet caption under player; never a badge.
+   Place .vid-wrap inside the text column, never as a sibling grid child of the art column. */
+.vid-wrap{margin:.65rem 0 .85rem;max-width:100%;min-width:0;width:100%}
+.vid-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;max-width:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.72rem;line-height:1.35;opacity:.55;font-weight:400}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
 
 /* —— Interactive pulse (Warm Label / cozy-native; not K-pop photocards) —— */
@@ -248,3 +250,5 @@ svg.stitch.is-drawn path{stroke-dashoffset:0}
 .opt:active span{transform:scale(.98)}
 .js .ws-wrap.reveal{opacity:0;transform:translateY(12px)}.js .ws-wrap.reveal.in{opacity:1;transform:none;transition:opacity .6s,transform .6s}
 .final.reveal,.final .final-in.reveal{/* handled by .reveal */}
+
+.dr-body{grid-template-columns:340px minmax(0,1fr)}.dr-main,.lc-b{min-width:0}
