@@ -252,3 +252,63 @@ svg.stitch.is-drawn path{stroke-dashoffset:0}
 .final.reveal,.final .final-in.reveal{/* handled by .reveal */}
 
 .dr-body{grid-template-columns:340px minmax(0,1fr)}.dr-main,.lc-b{min-width:0}
+
+
+/* —— card-pop (REUSABLE; Warm Label / weighted skin) ——
+   Same class names as gadgets/galleyworks (.card-pop / .card-pop-stage).
+   Cozy colors only: mulberry rim + ember spark + oat stage. Not K-beauty.
+   Vid stays inside .lc-b (§9). */
+.card-pop-stage{
+  position:relative;
+  padding:12px 8px 18px;
+  border-radius:16px;
+  background:
+    radial-gradient(85% 60% at 50% 0%, rgba(210,100,59,.10), transparent 55%),
+    linear-gradient(180deg, rgba(59,31,43,.05), transparent 70%);
+  box-shadow: inset 0 1px 0 rgba(210,100,59,.14);
+}
+.card-pop-stage:before{
+  content:"";
+  position:absolute;
+  inset:6px 4px auto 4px;
+  height:2px;
+  background:linear-gradient(90deg, transparent, rgba(210,100,59,.45), transparent);
+  pointer-events:none;
+}
+.card-pop{
+  position:relative;
+  isolation:isolate;
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 0 0 1px rgba(59,31,43,.12),
+    0 0 0 1px rgba(210,100,59,.22),
+    0 18px 36px -22px rgba(59,31,43,.45)!important;
+}
+.lc-b .usage{
+  margin:0 0 10px;
+  color:var(--mute);
+  font-size:14.5px;
+  line-height:1.45;
+  padding:10px 12px;
+  border-left:3px solid var(--emb);
+  background:rgba(255,255,255,.55);
+  border-radius:0 8px 8px 0;
+}
+.lc-b .usage strong{color:var(--mul);font-weight:700}
+.lc-b .fr-note{
+  margin:0 0 10px;
+  font-size:13.5px;
+  line-height:1.4;
+  padding:8px 12px;
+  border-radius:8px;
+  background:rgba(199,83,58,.10);
+  color:var(--mul);
+  box-shadow:inset 0 0 0 1px rgba(199,83,58,.28);
+}
+.lc-b .vid-wrap{margin:.45rem 0 .75rem;min-width:0;width:100%;max-width:100%}
+@media (max-width:640px){
+  .card-pop-stage{padding:8px 4px 12px}
+  .card-pop{box-shadow:inset 0 0 0 1px #fff,0 0 0 1px rgba(59,31,43,.12),0 12px 26px -18px rgba(59,31,43,.4)!important}
+}
+#weighted{position:relative}
+#weighted.is-weighted{background:linear-gradient(180deg,rgba(90,46,64,.08),transparent 55%)}
