@@ -1,0 +1,20 @@
+{
+  "board": "Tatami Fold \u2014 Japanese floor mattresses",
+  "generated": "2026-10-23",
+  "pins": [
+    {
+      "id": "pin-hero",
+      "title": "Best Japanese floor mattress 2026",
+      "description": "Three foldable floor futons for guests, dorms and small rooms. Listing facts only. As an Amazon Associate I earn from qualifying purchases.",
+      "alt": "Folded floor futon illustration",
+      "path": "pins/pin-hero.svg"
+    },
+    {
+      "id": "pin-compare",
+      "title": "Twin XL vs Full vs Twin floor mattress",
+      "description": "Size and thickness from each Amazon listing. No prices, no ratings. As an Amazon Associate I earn from qualifying purchases.",
+      "alt": "Comparison illustration",
+      "path": "pins/pin-compare.svg"
+    }
+  ]
+}
