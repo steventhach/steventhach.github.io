@@ -3,6 +3,61 @@
   "use strict";
   var d = document;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Facebook-ad attribution: rewrite Amazon tags to galleyworks-facebook-20 on this path only.
+  // Signals: utm_source=facebook|fb, or utm_medium=paid_social with facebook in source/campaign, or fbclid.
+  // Persist in sessionStorage so in-site navigation keeps attribution. Organic keeps placement tags.
+  (function () {
+    var FB_TAG = "galleyworks-facebook-20";
+    var KEY = "gw_fb_ad";
+    function params() {
+      try { return new URLSearchParams(location.search); } catch (e) { return new URLSearchParams(); }
+    }
+    function detect() {
+      var q = params();
+      var src = (q.get("utm_source") || "").toLowerCase();
+      var med = (q.get("utm_medium") || "").toLowerCase();
+      var camp = (q.get("utm_campaign") || "").toLowerCase();
+      if (src === "facebook" || src === "fb") return true;
+      if (med === "paid_social" && (src.indexOf("facebook") > -1 || src.indexOf("fb") > -1 || camp.indexOf("facebook") > -1 || camp.indexOf("fb") > -1)) return true;
+      if (q.get("fbclid")) return true;
+      return false;
+    }
+    var on = false;
+    try {
+      if (detect()) { sessionStorage.setItem(KEY, "1"); on = true; }
+      else { on = sessionStorage.getItem(KEY) === "1"; }
+    } catch (e) { on = detect(); }
+    if (!on) return;
+    function rewrite(href) {
+      if (!href || href.indexOf("amazon.") === -1) return href;
+      return href.replace(/([?&])tag=[a-z0-9-]+/i, function (_m, p) { return p + "tag=" + FB_TAG; });
+    }
+    d.querySelectorAll('a[href*="amazon."]').forEach(function (a) {
+      var h = a.getAttribute("href");
+      if (!h) return;
+      var n = rewrite(h);
+      if (n !== h) { a.setAttribute("href", n); a.setAttribute("data-fb-tag", FB_TAG); }
+    });
+    var dataEl = d.getElementById("gw-data");
+    if (dataEl) {
+      try {
+        var DATA = JSON.parse(dataEl.textContent);
+        Object.keys(DATA.products || {}).forEach(function (asin) {
+          if (DATA.products[asin].url) DATA.products[asin].url = rewrite(DATA.products[asin].url);
+        });
+        dataEl.textContent = JSON.stringify(DATA);
+      } catch (e) {}
+    }
+    // Keep later quiz CTA writes on the FB tag
+    d.addEventListener("click", function (ev) {
+      var a = ev.target.closest && ev.target.closest('a[href*="amazon."]');
+      if (!a) return;
+      var h = a.getAttribute("href"), n = rewrite(h);
+      if (n !== h) a.setAttribute("href", n);
+    }, true);
+  })();
+
   // Real holiday dates: T-minus days (computed from the visitor's own clock; no fake timers).
   d.querySelectorAll(".strip[data-date]").forEach(function (li) {
     var p = li.getAttribute("data-date").split("-"), t = new Date(+p[0], +p[1] - 1, +p[2]);
@@ -41,7 +96,9 @@
     var h = location.hash.slice(1);
     if (!h) return;
     var el = d.getElementById(h);
-    if (el && el.tagName === "DETAILS") { el.open = true; el.scrollIntoView({ block: "center" }); }
+    if (!el) return;
+    if (el.tagName === "DETAILS") el.open = true;
+    el.scrollIntoView({ block: "center" });
   }
   window.addEventListener("hashchange", openHash); openHash();
 

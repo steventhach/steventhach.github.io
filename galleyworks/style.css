@@ -125,7 +125,7 @@ q{quotes:"\201C" "\201D"}
 .bp-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .bp{background:var(--paper);color:#1A2230;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s}
 .bp:hover{transform:translateY(-6px) rotate(-.4deg)}
-.bp-art{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--navy)}.bp-art svg{width:100%;height:100%;display:block}
+.bp-art{position:relative;aspect-ratio:16/10;overflow:hidden;background:#152A45;min-height:180px}.bp-art svg{width:100%;height:100%;display:block}
 .bp-rank{position:absolute;left:14px;top:12px;font:900 30px/1 var(--disp);color:var(--ink);background:var(--brass2);padding:4px 10px;border-radius:6px;text-transform:uppercase}
 .bp-body{padding:18px 20px 8px;flex:1}
 .bp-meta{display:flex;gap:10px;flex-wrap:wrap;font-size:10px;color:#7C6C4C;margin-bottom:10px}
@@ -308,7 +308,7 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .pf-row .skip .what s{text-decoration:none;color:#C3CCD9}
 .pf-row .skip .what{position:relative}
 /* photo window (product photo slot). Consistent crop: the frame sets the aspect ratio; photos use object-fit:contain on white. */
-.pw{position:relative;width:100%;height:100%;overflow:hidden;background:var(--navy)}
+.pw{position:absolute;inset:0;width:100%;height:100%;min-height:0;overflow:hidden;background:#152A45}
 .pw>svg{width:100%;height:100%;display:block}
 .pw-photo{background:#fff}
 .pw .prod-img{position:absolute;inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);object-fit:contain;object-position:center}
@@ -331,3 +331,23 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .toc-chip:hover,.toc-chip:focus-visible{border-color:var(--brass);background:rgba(201,163,92,.12);outline:none}
 .shop-sec .sec-head{margin-bottom:18px}
 @media (max-width:700px){.toc-chip{flex:1 1 calc(50% - 10px);padding:10px 12px}.toc-chip b{font-size:13px}}
+
+/* Always-visible shop bay cards (art never hidden in closed details) */
+.bay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
+.bay{display:grid;grid-template-columns:200px 1fr;gap:0;background:rgba(8,16,28,.72);border:1px solid #3A4E6E;border-radius:14px;overflow:hidden}
+.bay-art{position:relative;aspect-ratio:1;background:#152A45;min-height:200px}
+.bay-art .pw{position:absolute;inset:0}
+.bay-n{position:absolute;left:10px;top:10px;z-index:2;font:800 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#1A1206;background:linear-gradient(180deg,#F0D79C,#B48D47);padding:4px 8px;border-radius:5px}
+.bay-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px}
+.bay-body h3{margin:0;font:800 22px/1.1 var(--disp);text-transform:uppercase;color:var(--cream);letter-spacing:.02em}
+.bay-body .hook{margin:0;color:#B4C1D3;font-size:14.5px}
+.bay-body .why{margin:0;color:#D5DEEA;font-size:14.5px}
+.bay-body .take{margin:4px 0 0}
+.bay-body .btn{align-self:flex-start;margin-top:6px}
+.bp-art{position:relative}
+.bp-art .pw,.rev-art .pw,.lk-art .pw,.sc-art .pw,.pp-art .pw{position:absolute;inset:0}
+.pw:after{opacity:.35}
+@media (max-width:900px){.bay-grid{grid-template-columns:1fr}.bay{grid-template-columns:1fr}.bay-art{min-height:220px;aspect-ratio:4/3}}
+
+.rev-art,.pp-art,.sc-art{position:relative;min-height:180px}
+.rev-art .pw,.pp-art .pw,.sc-art .pw{position:absolute;inset:0}
