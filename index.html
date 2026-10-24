@@ -3,49 +3,267 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>Worth It Edit: gift guides</title>
-<meta name="description" content="Independent gift guides from Worth It Edit.">
+<title>Worth It Edit — Skip it or buy it</title>
+<meta name="description" content="Independent gift and product guides from Worth It Edit. Listing specs, cited videos, Amazon disclosure — skip it or buy it.">
 <link rel="canonical" href="https://worthitedit.com/">
-<style>
-:root{--ink:#1d1b18;--muted:#6b665e;--line:#e4ddd0;--bg:#faf7f1;--accent:#8a6a2f}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.disclosure-bar{background:#f1ebdf;border-bottom:1px solid var(--line);font-size:.82rem;color:#3b372f;padding:.7rem 1.25rem;text-align:center}
-main{max-width:720px;margin:0 auto;padding:4.5rem 1.5rem 3rem}
-.k{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0}
-h1{font-family:ui-serif,Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.08;margin:.5rem 0 1rem;letter-spacing:-.01em}
-p.lede{color:var(--muted);max-width:34rem;margin:0 0 2.5rem}
-ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-li a{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.3rem .25rem;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:background .2s,padding .2s}
-li a:hover,li a:focus-visible{background:#f3eee4;padding-left:.75rem}
-li b{font-family:ui-serif,Georgia,serif;font-weight:500;font-size:1.35rem}
-li span{color:var(--muted);font-size:.9rem;white-space:nowrap}
-footer{max-width:720px;margin:0 auto;padding:1.5rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
-@media(prefers-reduced-motion:reduce){li a{transition:none}}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="disclosure disclosure-bar"><b>Affiliate disclosure:</b> The guides on this site earn from qualifying purchases made through their Amazon links (paid links), at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.</div>
-<main>
-<p class="k">Worth It Edit</p>
-<h1>Gift guides, read carefully.</h1>
-<p class="lede">Independent guides built from public listings and cited reviews. Each guide states its sources and its disclosures up front.</p>
-<ul>
-<li><a href="toys/"><b>The Ask Index — holiday toys</b><span>Holiday 2026 &rarr;</span></a></li>
-<li><a href="galleyworks/"><b>The Galley Works — aviation crew shop</b><span>Pilots, FAs, layover &amp; cockpit gear &rarr;</span></a></li>
-<li><a href="kbeauty/"><b>Seoul Annotated — K-beauty skincare</b><span>Skincare guide &rarr;</span></a></li>
-<li><a href="vacuums/"><b>Fine Particle — cordless vacuums</b><span>Vacuum guide &rarr;</span></a></li>
-<li><a href="aitools/"><b>Tally Light — AI creator tools</b><span>Creator tools guide &rarr;</span></a></li>
-<li><a href="cozy/"><b>The Warm Label — cozy gifts</b><span>Cozy gift guide &rarr;</span></a></li>
-<li><a href="gadgets/"><b>Fix Kit — tech gadgets</b><span>Gadget guide &rarr;</span></a></li>
-<li><a href="floor-mattress/"><b>Tatami Fold — Japanese floor mattresses</b><span>Guest, dorm &amp; small-room floor futons &rarr;</span></a></li>
-<li><a href="walking-pad/"><b>Quiet Pace — under-desk walking pads</b><span>Home-office walking pads &rarr;</span></a></li>
-<li><a href="rice-cooker/"><b>Tiny Pot — mini rice cookers</b><span>Dorm &amp; one-person kitchens &rarr;</span></a></li>
-<li><a href="ninja-kitchen/"><b>Counter Proof — Ninja kitchen demos</b><span>Waffle-first small appliances &rarr;</span></a></li>
-<li><a href="fridge-shelf/"><b>Side Cleared — magnetic fridge shelves</b><span>No-drill fridge-side spice racks &rarr;</span></a></li>
-<li><a href="shark-beauty/"><b>Gloss Lab — Shark Glossi</b><span>Wet-to-dry blow dryer brush colorways &rarr;</span></a></li>
-</ul>
-</main>
-<footer>As an Amazon Associate I earn from qualifying purchases. Not affiliated with or endorsed by Amazon, any airline, or any brand named in the guides.</footer>
+<div class="disclosure-bar"><b>Affiliate disclosure:</b> The guides on this site earn from qualifying purchases made through their Amazon links (paid links), at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.</div>
+
+<div class="page">
+  <header class="masthead">
+    <div class="masthead-wash" aria-hidden="true">
+      <img src="img/masthead.jpg" alt="" class="masthead-photo">
+      <div class="masthead-veil"></div>
+    </div>
+    <div class="masthead-glow" aria-hidden="true"></div>
+    <div class="masthead-collage" aria-hidden="true">
+      <span style="--img:url('tiles/kbeauty.png')"></span>
+      <span style="--img:url('tiles/cozy.png')"></span>
+      <span style="--img:url('tiles/toys.png')"></span>
+    </div>
+    <p class="kicker">Worth It Edit</p>
+    <h1 class="hero-line">
+      <span class="hero-word hero-word--1">Skip it</span>
+      <span class="hero-or">or</span>
+      <span class="hero-word hero-word--2"><em>buy it.</em></span>
+    </h1>
+    <hr class="rule" />
+    <p class="lede">Trending buys, judged on the facts.</p>
+    <ul class="trust" aria-label="How we edit">
+      <li>Listing specs</li>
+      <li>Cited videos</li>
+      <li>Amazon disclosure</li>
+    </ul>
+  </header>
+
+  <section class="mosaic-stage" aria-label="Guide mosaic">
+    <ul class="mosaic">
+      <li class="tile tile--feature tile--tall" style="--i:0">
+        <a href="galleyworks/">
+          <div class="tile-media">
+            <img src="tiles/galleyworks.png" alt="" width="1200" height="630" loading="eager">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Aviation crew</p>
+            <h2 class="tile-name">The Galley Works</h2>
+            <p class="tile-angle">Pilots, FAs, layover &amp; cockpit gear</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile tile--feature tile--tall" style="--i:1">
+        <a href="kbeauty/">
+          <div class="tile-media">
+            <img src="tiles/kbeauty.png" alt="" width="1200" height="630" loading="eager">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Skincare</p>
+            <h2 class="tile-name">Seoul Annotated</h2>
+            <p class="tile-angle">K-beauty routines, read carefully</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile" style="--i:2">
+        <a href="gadgets/">
+          <div class="tile-media">
+            <img src="tiles/gadgets.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Tech</p>
+            <h2 class="tile-name">Fix Kit</h2>
+            <p class="tile-angle">Tech gadgets for the desk and bag</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile" style="--i:3">
+        <a href="cozy/">
+          <div class="tile-media">
+            <img src="tiles/cozy.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Home</p>
+            <h2 class="tile-name">The Warm Label</h2>
+            <p class="tile-angle">Cozy gifts that stay on the list</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile" style="--i:4">
+        <a href="vacuums/">
+          <div class="tile-media">
+            <img src="tiles/vacuums.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Floor care</p>
+            <h2 class="tile-name">Fine Particle</h2>
+            <p class="tile-angle">Cordless vacuums, listing-first</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile tile--wide" style="--i:5">
+        <a href="toys/">
+          <div class="tile-media">
+            <img src="tiles/toys.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Holiday 2026</p>
+            <h2 class="tile-name">The Ask Index</h2>
+            <p class="tile-angle">Holiday toys — skip it or buy it before the cart fills</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile tile--tilt-l" style="--i:6">
+        <a href="shark-beauty/">
+          <div class="tile-media">
+            <img src="tiles/shark-beauty.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Hair tools</p>
+            <h2 class="tile-name">Gloss Lab</h2>
+            <p class="tile-angle">Shark Glossi wet-to-dry colorways</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile" style="--i:7">
+        <a href="floor-mattress/">
+          <div class="tile-media">
+            <img src="tiles/floor-mattress.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Sleep</p>
+            <h2 class="tile-name">Tatami Fold</h2>
+            <p class="tile-angle">Guest, dorm &amp; small-room floor futons</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile tile--tilt-r" style="--i:8">
+        <a href="walking-pad/">
+          <div class="tile-media">
+            <img src="tiles/walking-pad.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Desk</p>
+            <h2 class="tile-name">Quiet Pace</h2>
+            <p class="tile-angle">Under-desk walking pads for home office</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile" style="--i:9">
+        <a href="rice-cooker/">
+          <div class="tile-media">
+            <img src="tiles/rice-cooker.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Kitchen</p>
+            <h2 class="tile-name">Tiny Pot</h2>
+            <p class="tile-angle">Mini rice cookers for dorm &amp; one-person kitchens</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile" style="--i:10">
+        <a href="ninja-kitchen/">
+          <div class="tile-media">
+            <img src="tiles/ninja-kitchen.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Appliances</p>
+            <h2 class="tile-name">Counter Proof</h2>
+            <p class="tile-angle">Ninja kitchen demos, waffle-first</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile tile--tilt-l" style="--i:11">
+        <a href="fridge-shelf/">
+          <div class="tile-media">
+            <img src="tiles/fridge-shelf.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Storage</p>
+            <h2 class="tile-name">Side Cleared</h2>
+            <p class="tile-angle">No-drill magnetic fridge-side spice racks</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+      <li class="tile tile--feature" style="--i:12">
+        <a href="aitools/">
+          <div class="tile-media">
+            <img src="tiles/aitools.png" alt="" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="tile-shade"></div>
+          <div class="tile-shine" aria-hidden="true"></div>
+          <div class="tile-copy">
+            <p class="tile-label">Creators</p>
+            <h2 class="tile-name">Tally Light</h2>
+            <p class="tile-angle">AI creator tools — what to skip, what to keep</p>
+            <p class="tile-cta">Open guide <span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="decision" aria-labelledby="decision-label">
+    <p class="decision-kicker" id="decision-label">The frame</p>
+    <div class="decision-cols">
+      <div class="decision-col">
+        <h2>Skip</h2>
+        <p>When the listing facts don’t match how you live, skip without guilt.</p>
+      </div>
+      <div class="decision-divider" aria-hidden="true"></div>
+      <div class="decision-col">
+        <h2>Buy <em>when it fits</em></h2>
+        <p>When the facts line up with your use case, buy with a clear yes.</p>
+      </div>
+    </div>
+    <p class="decision-rule">Skip when it’s wrong for you. Buy when the facts fit.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div>
+      <span class="wordmark">Worth It Edit</span>
+      <span class="handle"> · @WORTHITEDIT</span>
+    </div>
+    <p style="margin:0">As an Amazon Associate I earn from qualifying purchases. Not affiliated with or endorsed by Amazon, any airline, or any brand named in the guides.</p>
+  </footer>
+</div>
 </body>
 </html>
