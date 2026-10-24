@@ -32,9 +32,12 @@
         x.target.classList.add("is-drawn");
         stitchIO.unobserve(x.target);
       });
-    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.2 });
+    }, { rootMargin: "0px 0px -4% 0px", threshold: 0 });
     d.querySelectorAll("svg.stitch").forEach(function (el) {
-      if (reduce) el.classList.add("is-drawn"); else stitchIO.observe(el);
+      if (reduce) { el.classList.add("is-drawn"); return; }
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("is-drawn");
+      else stitchIO.observe(el);
     });
     var heat = d.getElementById("heated");
     if (heat) {
