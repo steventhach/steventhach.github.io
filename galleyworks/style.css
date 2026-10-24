@@ -409,8 +409,8 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 
 
 .bay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
-.bay{display:grid;grid-template-columns:minmax(240px,42%) 1fr;gap:0;background:rgba(8,16,28,.72);border:1px solid #3A4E6E;border-radius:16px;overflow:hidden}
-.bay-art{position:relative;aspect-ratio:1;background:#152A45;min-height:260px}
+.bay{display:grid;grid-template-columns:minmax(240px,42%) minmax(0,1fr);gap:0;background:rgba(8,16,28,.72);border:1px solid #3A4E6E;border-radius:16px;overflow:hidden}
+.bay-art{position:relative;aspect-ratio:1;width:100%;max-width:100%;min-width:0;min-height:0;overflow:hidden;background:#152A45;align-self:start}
 .bay-art .pw{position:absolute;inset:0}
 .bay-n{position:absolute;left:10px;top:10px;z-index:2;font:800 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#1A1206;background:linear-gradient(180deg,#F0D79C,#B48D47);padding:4px 8px;border-radius:5px}
 .bay-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px}
@@ -442,8 +442,9 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .bp .vid-cap a,.rev-body .vid-cap a,.pp .vid-cap a{color:rgba(26,34,48,.7)}
 .bay-body,.bp-body,.pp-body,.rev-body>div{min-width:0}
 .bay-body .vid-wrap,.bp-body .vid-wrap,.pp-body .vid-wrap,.rev-body .vid-wrap{margin-top:.4rem;margin-bottom:.55rem}
-/* Keep bay as strict 2-col: art | body (embed is inside body) */
-.bay{grid-template-columns:200px minmax(0,1fr)}
+/* Keep bay as strict 2-col: art | body (embed is inside body).
+   Column minmax(240px,42%) sizes the art; do NOT pin a narrower track
+   or aspect-ratio+min-height will overflow over .bay-body text. */
 .bay-art{min-width:0}
 @media (max-width:900px){.bay{grid-template-columns:1fr}}
 
@@ -503,5 +504,5 @@ section.sec.is-on-stand > .sec-head .kicker:before{content:"";display:inline-blo
 }
 @media (max-width:900px){
   .bay{grid-template-columns:1fr}
-  .bay-art{min-height:240px;aspect-ratio:4/3}
+  .bay-art{width:100%;max-width:100%;min-height:0;aspect-ratio:4/3}
 }
