@@ -321,3 +321,13 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .bp-art{aspect-ratio:4/3}
 .pp-art{aspect-ratio:16/9;max-height:440px}
 @media (max-width:700px){.bp-art{aspect-ratio:1/1}.lk-art,.rev-art{max-width:none;width:100%}.pp-art{aspect-ratio:1/1;max-height:none}}
+
+/* Aviation hub shop TOC */
+.shop-toc .sec-head{max-width:720px}
+.toc-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.toc-chip{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid #3A4E6E;border-radius:10px;background:rgba(14,26,43,.7);color:var(--cream);text-decoration:none;transition:border-color .15s, background .15s}
+.toc-chip i{font-style:normal;color:var(--brass2);font-size:11px;letter-spacing:.12em}
+.toc-chip b{font:800 15px/1.1 var(--disp);letter-spacing:.03em;text-transform:uppercase}
+.toc-chip:hover,.toc-chip:focus-visible{border-color:var(--brass);background:rgba(201,163,92,.12);outline:none}
+.shop-sec .sec-head{margin-bottom:18px}
+@media (max-width:700px){.toc-chip{flex:1 1 calc(50% - 10px);padding:10px 12px}.toc-chip b{font-size:13px}}
