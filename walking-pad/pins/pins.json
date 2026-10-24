@@ -1,0 +1,20 @@
+{
+  "board": "Quiet Pace \u2014 under-desk walking pads",
+  "generated": "2026-10-23",
+  "pins": [
+    {
+      "id": "pin-hero",
+      "title": "Best walking pad for home office 2026",
+      "description": "Three under-desk walking pads compared by speed, incline, noise, weight and desk fit. As an Amazon Associate I earn from qualifying purchases.",
+      "alt": "Walking pad under desk illustration",
+      "path": "pins/pin-hero.svg"
+    },
+    {
+      "id": "pin-compare",
+      "title": "Walking pad noise, weight, desk fit",
+      "description": "Listing facts only \u2014 no prices, no ratings. As an Amazon Associate I earn from qualifying purchases.",
+      "alt": "Walking pad comparison",
+      "path": "pins/pin-compare.svg"
+    }
+  ]
+}
