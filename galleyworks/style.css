@@ -359,3 +359,31 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .vid-cap{margin:.4rem 0 0;font-size:.72rem;line-height:1.35;color:rgba(232,228,220,.55);font-weight:400}
 .vid-cap a{color:rgba(232,228,220,.7);text-decoration:underline;text-underline-offset:2px}
 .bp .vid-wrap,.bay .vid-wrap{margin-top:.5rem}
+
+/* —— Interactive pulse (Galley Works / aviation-native; not K-pop photocards) —— */
+.js .bay, .js .bp{opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .65s cubic-bezier(.2,.8,.2,1)}
+.js .bay.is-open, .js .bp.is-open{opacity:1;transform:none}
+.bay-art{isolation:isolate}
+.bay-art:after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,#1A2A40,#0E1828);transform-origin:top;transition:transform .7s cubic-bezier(.2,.85,.2,1);pointer-events:none;box-shadow:inset 0 -8px 0 rgba(180,141,71,.35)}
+.bay.is-open .bay-art:after{transform:translateY(-102%)}
+.preflight .stamp, .pp .stamp{opacity:0;transform:scale(1.35) rotate(-10deg);transition:opacity .35s, transform .45s cubic-bezier(.2,.9,.3,1.2)}
+.preflight .stamp.is-thud, .pp .stamp.is-thud{opacity:1}
+.preflight .stamp-ok.is-thud{transform:rotate(2deg) scale(1)}
+.preflight .stamp-inop.is-thud, .pp .stamp-inop.is-thud{transform:rotate(-3deg) scale(1)}
+.pp .stamp-ok.is-thud{transform:rotate(2deg) scale(1)}
+section.sec.is-on-stand > .sec-head .kicker{color:var(--amber)}
+section.sec.is-on-stand > .sec-head .kicker:before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(216,64,47,.55);vertical-align:middle}
+@media (prefers-reduced-motion:no-preference){
+  section.sec.is-on-stand > .sec-head .kicker:before{animation:beacon 1.6s infinite}
+  .sticky-bar.is-brass{box-shadow:0 20px 40px -10px rgba(0,0,0,.7),0 0 0 1px rgba(180,141,71,.55),0 0 24px rgba(180,141,71,.25)}
+  .sticky-bar.is-brass .sb-main{animation:brasspulse 2s ease-in-out infinite}
+  @keyframes brasspulse{0%,100%{box-shadow:0 0 0 0 rgba(180,141,71,.4)}50%{box-shadow:0 0 0 8px rgba(180,141,71,0)}}
+  #share-card.is-printed{animation:print .65s cubic-bezier(.2,.8,.2,1)}
+  .hero-tag .streamer{transform-origin:top center;animation:sway 3.2s ease-in-out infinite}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .bay, .js .bp{opacity:1;transform:none}
+  .bay-art:after{display:none}
+  .preflight .stamp, .pp .stamp{opacity:1;transform:none}
+  .sticky-bar.is-brass .sb-main, section.sec.is-on-stand > .sec-head .kicker:before, .hero-tag .streamer{animation:none!important}
+}

@@ -1,4 +1,5 @@
-/* The Galley Works v4 (crew room): first-party, no tracking, no network calls. */
+/* The Galley Works v4 (crew room): first-party, no tracking, no network calls.
+   Aviation-native pulse: bay doors, stamp thud, sticky brass, bag-tag print — not K-pop photocards. */
 (function () {
   "use strict";
   var d = document;
@@ -91,6 +92,61 @@
     }, { threshold: .4 });
     io.observe(board);
   }
+
+  // —— Aviation-native interactive pulse (crew room / bay / checklist — not photocard flips) ——
+  d.documentElement.classList.add("js");
+  // Bay doors open when a shop bay rolls onto the stand
+  var bays = d.querySelectorAll(".bay, .bp");
+  if ("IntersectionObserver" in window) {
+    var bayIO = new IntersectionObserver(function (es) {
+      es.forEach(function (x) {
+        if (!x.isIntersecting) return;
+        x.target.classList.add("is-open");
+        bayIO.unobserve(x.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.15 });
+    bays.forEach(function (el) {
+      if (reduce) el.classList.add("is-open");
+      else {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("is-open");
+        else bayIO.observe(el);
+      }
+    });
+  } else {
+    bays.forEach(function (el) { el.classList.add("is-open"); });
+  }
+  // Pre-flight stamps thud onto the checklist when they enter view
+  var stamps = d.querySelectorAll(".preflight .stamp, .pp .stamp");
+  if ("IntersectionObserver" in window && stamps.length) {
+    var stampIO = new IntersectionObserver(function (es) {
+      es.forEach(function (x) {
+        if (!x.isIntersecting) return;
+        x.target.classList.add("is-thud");
+        stampIO.unobserve(x.target);
+      });
+    }, { threshold: 0.4 });
+    stamps.forEach(function (el) {
+      if (reduce) el.classList.add("is-thud"); else stampIO.observe(el);
+    });
+  } else stamps.forEach(function (el) { el.classList.add("is-thud"); });
+  // Section on-stand: kicker beacon for the bay you're reading
+  var secs = d.querySelectorAll("section.sec");
+  if ("IntersectionObserver" in window && secs.length && !reduce) {
+    secs.forEach(function (sec) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (x) { x.target.classList.toggle("is-on-stand", x.isIntersecting); });
+      }, { threshold: 0.22 }).observe(sec);
+    });
+  }
+  // Sticky galley-cart: brass glow when docked
+  if (bar) {
+    var mo = new MutationObserver(function () {
+      bar.classList.toggle("is-brass", bar.classList.contains("show"));
+    });
+    mo.observe(bar, { attributes: true, attributeFilter: ["class"] });
+  }
+
   // Open a ranked pick when arriving on #pick-ASIN (shared links).
   function openHash() {
     var h = location.hash.slice(1);
@@ -143,6 +199,10 @@
     var cta = d.getElementById("sc-cta");
     cta.href = p.url; cta.setAttribute("data-asin", current);
     form.hidden = true; res.hidden = false;
+    var tag = d.getElementById("share-card");
+    if (tag) { tag.classList.remove("is-printed"); void tag.offsetWidth; tag.classList.add("is-printed"); }
+    var gate = d.getElementById("sc-gate");
+    if (gate && !reduce && typeof flap === "function") flap(gate);
     res.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
   });
   d.getElementById("sc-again").addEventListener("click", function () {
