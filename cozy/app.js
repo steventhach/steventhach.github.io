@@ -1,4 +1,5 @@
-/* The Warm Label: gift-tag countdowns, reveals, care-tag flips, fiber finder + gift tag, sticky bar. No trackers, no storage. */
+/* The Warm Label: gift-tag countdowns, reveals, care-tag turns, fiber finder + gift tag, sticky bar,
+   stitch draw-in, heated warm glow, ember sticky — cozy-native pulse (not K-pop photocards). No trackers, no storage. */
 (function () {
   var d = document, root = d.documentElement; root.classList.add("js");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -14,7 +15,7 @@
     var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
     rv.forEach(function (el) { io.observe(el); });
   } else rv.forEach(function (el) { el.classList.add("in"); });
-  // care tags: tap to turn
+  // care tags: tap to turn (sewing label — not a K-pop photocard)
   d.querySelectorAll(".ct-btn").forEach(function (b) {
     var tap = b.querySelector(".ct-tap"), lab = tap ? tap.lastChild.nodeValue : "";
     b.addEventListener("click", function () {
@@ -23,6 +24,37 @@
       if (tap) tap.lastChild.nodeValue = on ? lab : " Turn it back";
     });
   });
+  // Theme-native pulse: stitch draw-in, heated warm glow, Write-the-tag ember
+  if ("IntersectionObserver" in window) {
+    var stitchIO = new IntersectionObserver(function (es) {
+      es.forEach(function (x) {
+        if (!x.isIntersecting) return;
+        x.target.classList.add("is-drawn");
+        stitchIO.unobserve(x.target);
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.2 });
+    d.querySelectorAll("svg.stitch").forEach(function (el) {
+      if (reduce) el.classList.add("is-drawn"); else stitchIO.observe(el);
+    });
+    var heat = d.getElementById("heated");
+    if (heat) {
+      if (reduce) heat.classList.add("is-warm");
+      else {
+        new IntersectionObserver(function (es) {
+          es.forEach(function (x) { heat.classList.toggle("is-warm", x.isIntersecting); });
+        }, { threshold: 0.25 }).observe(heat);
+      }
+    }
+  } else {
+    d.querySelectorAll("svg.stitch").forEach(function (el) { el.classList.add("is-drawn"); });
+    var heat0 = d.getElementById("heated"); if (heat0) heat0.classList.add("is-warm");
+  }
+  var goBtn = d.getElementById("q-go");
+  if (goBtn) {
+    new MutationObserver(function () {
+      goBtn.classList.toggle("is-ember", !goBtn.disabled);
+    }).observe(goBtn, { attributes: true, attributeFilter: ["disabled"] });
+  }
   // sticky bar after the hero
   var st = d.getElementById("sticky"), hero = d.querySelector(".hero");
   if (st && hero && "IntersectionObserver" in window) {
@@ -50,7 +82,7 @@
     d.getElementById("gc-to").textContent = L.who[a.who]; d.getElementById("gc-where").textContent = L.where[a.where]; d.getElementById("gc-what").textContent = L.what[a.what];
     var dt = new Date(); d.getElementById("gc-date").textContent = dt.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
     var box = d.getElementById("gc-picks"); box.textContent = ""; top.forEach(function (x, n) { box.appendChild(pick(x, n)); });
-    var g = d.getElementById("giftcard"); g.classList.remove("is-on"); void g.offsetWidth; g.classList.add("is-on");
+    var g = d.getElementById("giftcard"); g.classList.remove("is-on", "is-tied"); void g.offsetWidth; g.classList.add("is-on", "is-tied");
     var r = d.getElementById("res-amz"); r.href = top[0].href; r.firstChild.nodeValue = "See " + top[0].short + " on Amazon "; r.hidden = false; d.getElementById("res-paid").hidden = false;
     share.disabled = false;
     last = "Gift tag for " + L.who[a.who].toLowerCase() + ": " + top[0].short + " (or " + top[1].short + "). Written on The Warm Label.";

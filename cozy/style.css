@@ -226,3 +226,25 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;opacity:.55}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
+
+/* —— Interactive pulse (Warm Label / cozy-native; not K-pop photocards) —— */
+svg.stitch path{stroke-dasharray:12 8;stroke-dashoffset:240;transition:stroke-dashoffset 1.1s ease}
+svg.stitch.is-drawn path{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){svg.stitch path{stroke-dasharray:none;stroke-dashoffset:0}}
+#heated{position:relative;transition:background-color .8s ease}
+#heated.is-warm{background:linear-gradient(180deg,rgba(210,100,59,.10),transparent 55%)}
+#heated.is-warm .lab-card{box-shadow:0 18px 40px -28px rgba(210,100,59,.55)}
+@media (prefers-reduced-motion:no-preference){
+  #heated.is-warm::after{content:"";pointer-events:none;position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,transparent,#D2643B,transparent);opacity:.55;animation:emberline 2.8s ease-in-out infinite}
+  @keyframes emberline{0%,100%{opacity:.25;transform:scaleX(.7)}50%{opacity:.7;transform:scaleX(1)}}
+  .sticky.on .btn-ember{animation:emberglow 2.2s ease-in-out infinite}
+  @keyframes emberglow{0%,100%{box-shadow:0 0 0 0 rgba(210,100,59,.45)}50%{box-shadow:0 0 0 8px rgba(210,100,59,0)}}
+  #q-go.is-ember:not(:disabled){animation:emberglow 1.8s ease-in-out infinite}
+  .giftcard.is-tied .gc-twine{animation:twinesway 1.2s ease-out}
+  @keyframes twinesway{0%{transform:rotate(-18deg);transform-origin:top center}60%{transform:rotate(8deg)}100%{transform:rotate(0)}}
+}
+.opt:has(input:checked) span{background:var(--hon);color:var(--mul);box-shadow:inset 0 0 0 1.5px var(--mul)}
+.opt span{transition:background .25s,color .25s,box-shadow .25s,transform .15s}
+.opt:active span{transform:scale(.98)}
+.js .ws-wrap.reveal{opacity:0;transform:translateY(12px)}.js .ws-wrap.reveal.in{opacity:1;transform:none;transition:opacity .6s,transform .6s}
+.final.reveal,.final .final-in.reveal{/* handled by .reveal */}
