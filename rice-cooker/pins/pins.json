@@ -1,0 +1,20 @@
+{
+  "board": "Tiny Pot \u2014 mini rice cookers",
+  "generated": "2026-10-23",
+  "pins": [
+    {
+      "id": "pin-hero",
+      "title": "Best mini rice cooker for dorm 2026",
+      "description": "Three mini cookers for dorms and one-person kitchens. As an Amazon Associate I earn from qualifying purchases.",
+      "alt": "Mini rice cooker illustration",
+      "path": "pins/pin-hero.svg"
+    },
+    {
+      "id": "pin-compare",
+      "title": "Dash vs Aroma vs Rice Robot \u2014 cups and footprint",
+      "description": "Listing facts only. As an Amazon Associate I earn from qualifying purchases.",
+      "alt": "Comparison",
+      "path": "pins/pin-compare.svg"
+    }
+  ]
+}
