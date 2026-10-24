@@ -50,9 +50,14 @@
   if (mag && "IntersectionObserver" in window) {
     if (reduce) mag.classList.add("is-charging");
     else {
+      function magInView() {
+        var r = mag.getBoundingClientRect();
+        return r.top < window.innerHeight * 0.9 && r.bottom > window.innerHeight * 0.1;
+      }
+      if (magInView()) mag.classList.add("is-charging");
       new IntersectionObserver(function (es) {
         es.forEach(function (x) { mag.classList.toggle("is-charging", x.isIntersecting); });
-      }, { threshold: 0.28 }).observe(mag);
+      }, { threshold: [0, 0.12, 0.3], rootMargin: "0px 0px -5% 0px" }).observe(mag);
     }
   } else if (mag) mag.classList.add("is-charging");
 
