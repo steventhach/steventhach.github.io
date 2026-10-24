@@ -352,13 +352,23 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .rev-art,.pp-art,.sc-art{position:relative;min-height:180px}
 .rev-art .pw,.pp-art .pw,.sc-art .pw{position:absolute;inset:0}
 
-/* Official YouTube embeds — quiet caption, not a badge */
-.vid-wrap{margin:.75rem 0 1rem;max-width:100%}
-.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#0a1018;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid-cap{margin:.4rem 0 0;font-size:.72rem;line-height:1.35;color:rgba(232,228,220,.55);font-weight:400}
+/* YouTube embeds — quiet caption under player; never a badge.
+   MUST live inside text columns (.bay-body / .bp-body / .pp-body / rev text col),
+   never as a sibling grid child of .bay-art / .rev-art (breaks 2-col grids). */
+.vid-wrap{margin:.65rem 0 .85rem;max-width:100%;min-width:0;width:100%}
+.vid-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:#0a1018;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;max-width:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.72rem;line-height:1.35;color:rgba(232,228,220,.55);font-weight:400}
 .vid-cap a{color:rgba(232,228,220,.7);text-decoration:underline;text-underline-offset:2px}
-.bp .vid-wrap,.bay .vid-wrap{margin-top:.5rem}
+/* Paper / light cards: dark quiet caption (cream-on-paper was unreadable) */
+.bp .vid-cap,.rev-body .vid-cap,.pp .vid-cap{color:rgba(26,34,48,.55)}
+.bp .vid-cap a,.rev-body .vid-cap a,.pp .vid-cap a{color:rgba(26,34,48,.7)}
+.bay-body,.bp-body,.pp-body,.rev-body>div{min-width:0}
+.bay-body .vid-wrap,.bp-body .vid-wrap,.pp-body .vid-wrap,.rev-body .vid-wrap{margin-top:.4rem;margin-bottom:.55rem}
+/* Keep bay as strict 2-col: art | body (embed is inside body) */
+.bay{grid-template-columns:200px minmax(0,1fr)}
+.bay-art{min-width:0}
+@media (max-width:900px){.bay{grid-template-columns:1fr}}
 
 /* —— Interactive pulse (Galley Works / aviation-native; not K-pop photocards) —— */
 .js .bay, .js .bp{opacity:0;transform:translateY(18px);transition:opacity .55s ease, transform .65s cubic-bezier(.2,.8,.2,1)}
