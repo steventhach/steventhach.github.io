@@ -220,3 +220,9 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 
 .lab-grid-paths{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;max-width:960px}
 @media (max-width:800px){.lab-grid-paths{grid-template-columns:1fr}}
+
+.vid-wrap{margin:.55rem 0 .9rem;max-width:100%}
+.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;opacity:.55}
+.vid-cap a{text-decoration:underline;text-underline-offset:2px}

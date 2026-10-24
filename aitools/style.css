@@ -254,3 +254,9 @@ section[id],li[id],article[id]{scroll-margin-top:84px}
 .tl-row:nth-child(4) .tl-bar:after{left:22%;right:30%}.tl-row:nth-child(5) .tl-bar:after{left:58%;right:4%}.tl-row:nth-child(6) .tl-bar:after{left:10%;right:6%}.tl-row:nth-child(7) .tl-bar:after{left:4%;right:18%}
 
 .afflink{color:var(--amber,#F5A524);text-transform:none;letter-spacing:.02em}
+
+.vid-wrap{margin:.55rem 0 .9rem;max-width:100%}
+.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;opacity:.55}
+.vid-cap a{text-decoration:underline;text-underline-offset:2px}
