@@ -225,3 +225,28 @@ details[open] .dr-sw{background:var(--org)}details[open] .dr-sw i{left:23px}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
 
 .sec-ltd .sec-h .sk-n{letter-spacing:.04em}
+
+/* —— Interactive pulse (Fix Kit / device faceplate; not K-pop photocards) —— */
+html.is-booting .kick .led{animation:ledboot .45s steps(3) both}
+html.is-powered .kick .led.on{box-shadow:0 0 0 2px rgba(47,203,114,.22),0 0 14px rgba(47,203,114,.85)}
+@keyframes ledboot{0%{background:var(--gr3);box-shadow:none}40%{background:var(--yel)}100%{background:var(--led)}}
+.console.is-armed .con-l .led{background:var(--led);box-shadow:0 0 0 2px rgba(47,203,114,.25),0 0 12px rgba(47,203,114,.8)}
+.console .q.is-set legend .qn{color:var(--led)}
+#q-go.is-hot:not(:disabled){box-shadow:0 0 0 0 rgba(255,90,31,.5)}
+@media (prefers-reduced-motion:no-preference){
+  #q-go.is-hot:not(:disabled){animation:porthot 1.6s ease-in-out infinite}
+  @keyframes porthot{0%,100%{box-shadow:0 0 0 0 rgba(255,90,31,.45)}50%{box-shadow:0 0 0 8px rgba(255,90,31,0)}}
+  .sticky.is-live .led{animation:ledpulse 1.4s ease-in-out infinite}
+  @keyframes ledpulse{0%,100%{box-shadow:0 0 0 2px rgba(47,203,114,.18),0 0 8px rgba(47,203,114,.55)}50%{box-shadow:0 0 0 3px rgba(47,203,114,.35),0 0 16px rgba(47,203,114,.95)}}
+  .ticket.is-scanning:after{content:"";position:absolute;left:8%;right:8%;height:2px;background:linear-gradient(90deg,transparent,var(--led),transparent);animation:lcdscan .9s linear;pointer-events:none;top:12%}
+  @keyframes lcdscan{from{top:10%;opacity:.9}to{top:88%;opacity:.2}}
+  #magsafe.is-charging .plate{animation:magsnap .7s cubic-bezier(.2,.9,.3,1.15) both}
+  @keyframes magsnap{0%{transform:translateY(10px) scale(.98);filter:saturate(.85)}60%{transform:translateY(-2px) scale(1.01)}100%{transform:none;filter:none}}
+  #magsafe.is-charging .plate:before{content:"";position:absolute;left:14px;top:14px;width:9px;height:9px;border-radius:50%;background:var(--led);box-shadow:0 0 0 2px rgba(47,203,114,.25),0 0 12px rgba(47,203,114,.9);animation:ledpulse 1.2s ease-in-out infinite;z-index:2}
+}
+.plate{position:relative}
+.js .pk-wrap.reveal{opacity:0;transform:translateY(12px)}.js .pk-wrap.reveal.in{opacity:1;transform:none;transition:opacity .55s,transform .55s}
+.pt.open .pt-back,.pt.flipped .pt-back{/* faceplate open */}
+@media (prefers-reduced-motion:reduce){
+  html.is-booting .kick .led, #q-go.is-hot, .sticky.is-live .led, .ticket.is-scanning:after, #magsafe.is-charging .plate{animation:none!important}
+}
