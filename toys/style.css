@@ -427,8 +427,12 @@ h1 em,h2 em{color:var(--brass2);font-weight:400}
 /* tag tilt per Top 3 slot (classes, not inline styles, so the CSP stays strict) */
 .wtag.sw1{--sw:-3deg}.wtag.sw2{--sw:2deg}.wtag.sw3{--sw:-1.5deg}
 
-.vid-wrap{margin:.55rem 0 .9rem;max-width:100%}
-.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:#1a1410;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.08)}
-.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid-cap{margin:.35rem 0 0;font-size:.7rem;line-height:1.35;color:rgba(40,30,20,.5)}
-.vid-cap a{color:rgba(180,40,40,.8);text-decoration:underline;text-underline-offset:2px}
+/* YouTube embeds — quiet caption under player; never a badge.
+   Place .vid-wrap inside the text column, never as a sibling grid child of the art column. */
+.vid-wrap{margin:.65rem 0 .85rem;max-width:100%;min-width:0;width:100%}
+.vid-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:#111;border-radius:10px;overflow:hidden;border:1px solid rgba(128,128,128,.25)}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;max-width:100%;border:0}
+.vid-cap{margin:.35rem 0 0;font-size:.72rem;line-height:1.35;opacity:.55;font-weight:400}
+.vid-cap a{text-decoration:underline;text-underline-offset:2px}
+
+@media(min-width:900px){.gcard{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}}.gtag{min-width:0}
