@@ -388,6 +388,8 @@ section[id],.result,li[id],article[id]{scroll-margin-top:84px}
 .bay-body h3{margin:0;font:800 22px/1.1 var(--disp);text-transform:uppercase;color:var(--cream);letter-spacing:.02em}
 .bay-body .hook{margin:0;color:#B4C1D3;font-size:14.5px}
 .bay-body .why{margin:0;color:#D5DEEA;font-size:14.5px}
+.bay-body .usage{margin:0;color:#C9D4E4;font-size:14.5px;line-height:1.45;padding:10px 12px;border-left:3px solid rgba(201,163,92,.55);background:rgba(14,26,42,.45);border-radius:0 8px 8px 0}
+.bay-body .usage strong{color:var(--cream);font-weight:700;letter-spacing:.02em}
 .bay-body .take{margin:4px 0 0}
 .bay-body .btn{align-self:flex-start;margin-top:6px}
 .bp-art{position:relative}
