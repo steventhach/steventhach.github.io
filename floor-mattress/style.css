@@ -234,3 +234,4 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
 
 .card-pop{transition:transform .2s ease,box-shadow .2s ease}.card-pop:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(27,58,75,.14)}@media (prefers-reduced-motion:reduce){.card-pop{transition:none}.card-pop:hover{transform:none}}
+.card-pop-stage{position:relative;padding:8px 4px 12px;border-radius:16px;background:linear-gradient(180deg,rgba(27,58,75,.04),transparent 70%);box-shadow:inset 0 1px 0 rgba(196,163,90,.22)}
