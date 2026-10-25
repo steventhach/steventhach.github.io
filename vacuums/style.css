@@ -290,3 +290,20 @@ section[id],article[id],li[id]{scroll-margin-top:84px}
 .vid-cap a{text-decoration:underline;text-underline-offset:2px}
 
 .dr-b{grid-template-columns:300px minmax(0,1fr)}.dr-main,.ds-b{min-width:0}
+
+/* § Spot · portable carpet cleaner bay (distinct from stick datasheets) */
+.sec-spot{position:relative}
+.sec-spot .sec-k{color:var(--sig)}
+.ds-grid-spot{grid-template-columns:minmax(0,1fr);max-width:820px}
+.ds-spot{position:relative;box-shadow:8px 8px 0 rgba(43,182,115,.35);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.ds-spot:hover{transform:translateY(-4px);box-shadow:12px 12px 0 rgba(43,182,115,.45)}
+.ds-spot .ds-n{color:#2BB673;-webkit-text-stroke:0}
+.ds-spot .usage{font-size:14.5px;line-height:1.5;color:var(--ink2);border-left:3px solid #2BB673;padding:8px 0 8px 12px;margin:.4rem 0 .85rem;background:rgba(43,182,115,.06);border-radius:0 8px 8px 0}
+.ds-spot .usage strong{color:var(--ink);font-weight:700}
+.ds-spot .spec{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:14px}
+.ds-spot .spec caption{caption-side:top;text-align:left;font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);margin-bottom:6px}
+.ds-spot .spec th{text-align:left;width:120px;padding:6px 10px 6px 0;color:var(--steel);font-weight:600;vertical-align:top}
+.ds-spot .spec td{padding:6px 0;border-top:1px solid var(--hair)}
+.ds-spot .spec td small{display:block;color:var(--steel);font-size:12px;margin-top:2px}
+@media (prefers-reduced-motion:reduce){.ds-spot,.ds-spot:hover{transform:none;transition:none}}
+@media (max-width:720px){.ds-grid-spot{max-width:none}.ds-spot .spec th{width:96px}}
