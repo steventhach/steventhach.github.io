@@ -306,3 +306,4 @@ section{padding:72px 0}
 
 .card-body,.pitem-top>div{min-width:0}
 .pitem-top{grid-template-columns:220px minmax(0,1fr)}
+.pick-anchor{display:block;position:relative;top:-90px;height:0;width:0;overflow:hidden}
