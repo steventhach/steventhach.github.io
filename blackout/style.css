@@ -46,7 +46,7 @@ em{font-style:italic;color:var(--amber)}
 .who-grid li{background:var(--storm);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:8px}
 .who-grid b{display:flex;align-items:center;gap:8px;color:#fff}.who-grid span{color:var(--mute);font-size:15px}
 .lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.lab-grid-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:980px}
+.lab-grid-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:980px}.lab-grid.lab-grid-1{grid-template-columns:minmax(0,1fr);max-width:560px;margin-left:auto;margin-right:auto}
 .lab-card{background:var(--storm);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .lc-h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
 .lc-n{font:700 12px var(--mono);letter-spacing:.1em;color:var(--amber)}
