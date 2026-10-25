@@ -247,3 +247,10 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
   .sec-elliptical .lab-card.reveal.in{transition:opacity .6s,transform .6s,box-shadow .6s}
   .sec-elliptical .lab-card.reveal.in:hover{box-shadow:0 1px 0 var(--line),0 28px 48px -28px rgba(28,74,58,.35)}
 }
+
+.sh-blocks{background:rgba(126,200,163,.18);color:#1A1F24}
+
+/* theme-native card-pop (Quiet Pace mint/graphite) */
+.card-pop-stage{position:relative}
+.card-pop{transition:transform .2s ease, box-shadow .2s ease}
+@media (hover:hover){.card-pop:hover{transform:translateY(-2px)}}
