@@ -21,7 +21,7 @@ em{font-style:italic;color:var(--ember)}
 .mast-in{display:flex;align-items:center;gap:22px;height:68px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}.wm{display:flex;flex-direction:column;line-height:1.05}
 .wm b{font:400 21px var(--disp);color:var(--plum)}.wm i{font:400 14px var(--body);color:var(--mute)}
-.mast nav{display:flex;gap:4px;margin-left:auto}
+.mast nav{display:flex;gap:4px;margin-left:auto;min-width:0;overflow-x:auto;scrollbar-width:none}.mast nav::-webkit-scrollbar{display:none}.mast nav a{flex:0 0 auto}
 .mast nav a{font:700 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px 10px;border-radius:6px;color:var(--plum)}
 .mast nav a:hover{background:rgba(26,36,46,.2);color:var(--plum)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/1 var(--body);text-decoration:none;padding:14px 20px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
