@@ -299,3 +299,4 @@ html.is-powered .kick .led.on{box-shadow:0 0 0 2px rgba(47,203,114,.22),0 0 14px
 @media (prefers-reduced-motion:reduce){
   html.is-booting .kick .led, #q-go.is-hot, .sticky.is-live .led, .ticket.is-scanning:after, #magsafe.is-charging .plate{animation:none!important}
 }
+@media (min-width:1081px){.mast nav{min-width:0;flex:0 1 auto;overflow-x:auto;scrollbar-width:none}.mast nav::-webkit-scrollbar{display:none}.mast nav a{flex:0 0 auto;padding:8px 7px}.mast .btn-sm{flex:0 0 auto}}
