@@ -117,9 +117,14 @@ em{font-style:italic;color:var(--amber)}
 .sh-hardware{background:rgba(233,196,106,.2);color:var(--amber)}
 .sh-bios{background:rgba(230,57,70,.18);color:#ff8a93}
 .sh-playbooks{background:rgba(42,157,143,.2);color:#7ddecf}
+.sh-kindle-case{background:rgba(233,196,106,.22);color:var(--amber)}
 .sec-shelf{background:linear-gradient(180deg,rgba(233,196,106,.10),transparent 80%)}
 .btn-gold{background:var(--amber);color:#14213D;box-shadow:0 6px 0 -2px var(--amber2),0 12px 24px -12px rgba(233,196,106,.55)}.btn-gold:hover{filter:brightness(1.05)}
 .bounty-card{padding:22px;border-radius:16px;background:linear-gradient(165deg,#1B2B4A,#14213D);border:1px solid rgba(233,196,106,.4);box-shadow:0 18px 36px -20px #000}
 .bounty-card h3{margin:0 0 8px;color:#fff}
 .bounty-card .usage{margin:12px 0;color:var(--cloud)}
 .bounty-note{font-size:13.5px;color:var(--mute);line-height:1.45}
+
+/* kindle-case bay — accessory under Paperwhite hero */
+.sec-case{background:linear-gradient(180deg,rgba(233,196,106,.12),transparent 75%)}
+.lab-grid-1{grid-template-columns:minmax(0,1fr);max-width:720px}
