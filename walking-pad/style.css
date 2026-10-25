@@ -252,6 +252,7 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 .sh-pushup{background:rgba(232,168,56,.16);color:#1A1F24}
 .sh-balance{background:rgba(232,168,56,.12);color:#1A1F24}
 .sh-abroll{background:rgba(232,168,56,.14);color:#1A1F24}
+.sh-pullup{background:rgba(232,168,56,.18);color:#1A1F24}
 
 /* theme-native card-pop (Quiet Pace mint/graphite) */
 .card-pop-stage{position:relative}
