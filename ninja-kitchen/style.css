@@ -271,3 +271,7 @@ h1,h2{text-wrap:balance}.btn{white-space:nowrap}.wm b{white-space:nowrap}
 @media (hover:hover){.card-pop:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px #fff,0 0 0 1px rgba(232,93,76,.55),0 0 0 3px rgba(245,200,76,.3),0 22px 40px -22px rgba(26,28,30,.6)!important}}
 @media (max-width:640px){.card-pop-stage{padding:8px 4px 12px}.card-pop{box-shadow:inset 0 0 0 1px #fff,0 0 0 1px rgba(26,28,30,.14),0 12px 26px -18px rgba(26,28,30,.48)!important}}
 @media (prefers-reduced-motion:reduce){.card-pop{transition:none}.card-pop:hover{transform:none}}
+
+/* overflow isolation @390 — keep table.ws scroll inside .ws-wrap; stop page-level x-scroll */
+.ws-wrap{max-width:100%;width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.wrap,main,.sec,.ct-grid,.ct,.drawers,.drawer,.drawer details,.card-pop-stage{min-width:0}
