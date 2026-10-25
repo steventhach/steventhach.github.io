@@ -307,3 +307,12 @@ section[id],article[id],li[id]{scroll-margin-top:84px}
 .ds-spot .spec td small{display:block;color:var(--steel);font-size:12px;margin-top:2px}
 @media (prefers-reduced-motion:reduce){.ds-spot,.ds-spot:hover{transform:none;transition:none}}
 @media (max-width:720px){.ds-grid-spot{max-width:none}.ds-spot .spec th{width:96px}}
+
+/* pet-hair-roller bay · card-pop (vacuums-native) */
+.card-pop-stage{position:relative;padding:12px 8px 18px;border-radius:16px;background:radial-gradient(85% 60% at 50% 0%,rgba(255,90,31,.10),transparent 55%)}
+.card-pop{isolation:isolate}
+.ds-roller{box-shadow:8px 8px 0 rgba(255,90,31,.30)}
+.ds-roller:hover{box-shadow:12px 12px 0 rgba(255,90,31,.40)}
+.ds-roller .ds-n{color:#FF5A1F}
+.ds-roller .usage{border-left-color:#FF5A1F;background:rgba(255,90,31,.06)}
+@media (max-width:640px){.card-pop-stage{padding:8px 4px 12px}.ds-roller{box-shadow:5px 5px 0 rgba(255,90,31,.30)}}
