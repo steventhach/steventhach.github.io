@@ -128,3 +128,7 @@ em{font-style:italic;color:var(--amber)}
 /* kindle-case bay — accessory under Paperwhite hero */
 .sec-case{background:linear-gradient(180deg,rgba(233,196,106,.12),transparent 75%)}
 .lab-grid-1{grid-template-columns:minmax(0,1fr);max-width:720px}
+
+/* book-light bay — hands-free neck light under Paperwhite + case */
+.sh-book-light{background:rgba(42,157,143,.2);color:#7ddecf}
+.sec-light{background:linear-gradient(180deg,rgba(42,157,143,.10),transparent 75%)}
