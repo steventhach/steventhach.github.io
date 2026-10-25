@@ -25,7 +25,7 @@ em{font-family:var(--acc);font-style:italic;font-weight:400}
 .mast-in{display:flex;align-items:center;gap:22px;height:68px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}.wm{display:flex;flex-direction:column;line-height:1.05}
 .wm b{font:400 21px var(--disp)}.wm i{font:400 italic 15px var(--acc);color:var(--mute)}
-.mast nav{display:flex;gap:4px;margin-left:auto}
+.mast nav{display:flex;gap:4px;margin-left:auto;min-width:0;overflow-x:auto;scrollbar-width:none}.mast nav::-webkit-scrollbar{display:none}.mast nav a{flex:0 0 auto}
 .mast nav a{font:700 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px 10px;border-radius:6px;color:var(--plum)}
 .mast nav a:hover{background:var(--oat)}
 /* buttons */
