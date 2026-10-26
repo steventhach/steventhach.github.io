@@ -5,52 +5,78 @@
   var d = document;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Facebook-ad attribution: rewrite Amazon tags to galleyworks-facebook-20 on this path only.
-  // Signals: utm_source=facebook|fb, or utm_medium=paid_social with facebook in source/campaign, or fbclid.
-  // Persist in sessionStorage so in-site navigation keeps attribution. Organic keeps placement tags.
+  // Channel attribution: rewrite Amazon tags when src/utm/fbclid says facebook|pinterest|tiktok.
+  // Persist in sessionStorage (wie_channel) so in-site nav keeps attribution. Organic keeps placement tags.
   (function () {
-    var FB_TAG = "galleyworks-facebook-20";
-    var KEY = "gw_fb_ad";
+    var TAGS = {
+      facebook: "galleyworks-facebook-20",
+      pinterest: "worthitedit-pinterest-20",
+      tiktok: "worthitedit-tiktok-20"
+    };
+    var KEY = "wie_channel";
     function params() {
       try { return new URLSearchParams(location.search); } catch (e) { return new URLSearchParams(); }
     }
+    function norm(v) {
+      v = (v || "").toLowerCase();
+      if (v === "facebook" || v === "fb") return "facebook";
+      if (v === "pinterest" || v === "pin") return "pinterest";
+      if (v === "tiktok" || v === "tt") return "tiktok";
+      return "";
+    }
     function detect() {
       var q = params();
+      var fromSrc = norm(q.get("src"));
+      if (fromSrc) return fromSrc;
+      var fromUtm = norm(q.get("utm_source"));
+      if (fromUtm) return fromUtm;
+      // Keep Meta paid_social / fbclid signals (Galley FB ads)
       var src = (q.get("utm_source") || "").toLowerCase();
       var med = (q.get("utm_medium") || "").toLowerCase();
       var camp = (q.get("utm_campaign") || "").toLowerCase();
-      if (src === "facebook" || src === "fb") return true;
-      if (med === "paid_social" && (src.indexOf("facebook") > -1 || src.indexOf("fb") > -1 || camp.indexOf("facebook") > -1 || camp.indexOf("fb") > -1)) return true;
-      if (q.get("fbclid")) return true;
-      return false;
+      if (med === "paid_social" && (src.indexOf("facebook") > -1 || src.indexOf("fb") > -1 || camp.indexOf("facebook") > -1 || camp.indexOf("fb") > -1)) return "facebook";
+      if (q.get("fbclid")) return "facebook";
+      return "";
     }
-    var on = false;
+    var channel = "";
     try {
-      if (detect()) { sessionStorage.setItem(KEY, "1"); on = true; }
-      else { on = sessionStorage.getItem(KEY) === "1"; }
-    } catch (e) { on = detect(); }
-    if (!on) return;
+      channel = detect();
+      if (channel) sessionStorage.setItem(KEY, channel);
+      else channel = sessionStorage.getItem(KEY) || "";
+    } catch (e) { channel = detect(); }
+    if (!channel || !TAGS[channel]) return;
+    var TAG = TAGS[channel];
     function rewrite(href) {
       if (!href || href.indexOf("amazon.") === -1) return href;
-      return href.replace(/([?&])tag=[a-z0-9-]+/i, function (_m, p) { return p + "tag=" + FB_TAG; });
+      if (/([?&])tag=/i.test(href)) {
+        return href.replace(/([?&])tag=[a-z0-9-]+/i, function (_m, p) { return p + "tag=" + TAG; });
+      }
+      return href + (href.indexOf("?") > -1 ? "&" : "?") + "tag=" + TAG;
     }
     d.querySelectorAll('a[href*="amazon."]').forEach(function (a) {
       var h = a.getAttribute("href");
       if (!h) return;
       var n = rewrite(h);
-      if (n !== h) { a.setAttribute("href", n); a.setAttribute("data-fb-tag", FB_TAG); }
+      if (n !== h) { a.setAttribute("href", n); a.setAttribute("data-wie-channel", channel); }
     });
-    var dataEl = d.getElementById("gw-data");
-    if (dataEl) {
+    ["gw-data", "picks-data", "data"].forEach(function (id) {
+      var el = d.getElementById(id);
+      if (!el) return;
       try {
-        var DATA = JSON.parse(dataEl.textContent);
-        Object.keys(DATA.products || {}).forEach(function (asin) {
-          if (DATA.products[asin].url) DATA.products[asin].url = rewrite(DATA.products[asin].url);
-        });
-        dataEl.textContent = JSON.stringify(DATA);
+        var DATA = JSON.parse(el.textContent);
+        function walk(o) {
+          if (!o || typeof o !== "object") return;
+          if (Array.isArray(o)) { o.forEach(walk); return; }
+          Object.keys(o).forEach(function (k) {
+            if (typeof o[k] === "string" && o[k].indexOf("amazon.") > -1) o[k] = rewrite(o[k]);
+            else walk(o[k]);
+          });
+        }
+        walk(DATA);
+        el.textContent = JSON.stringify(DATA);
       } catch (e) {}
-    }
-    // Keep later quiz CTA writes on the FB tag
+    });
+    // Keep later quiz CTA writes on the channel tag
     d.addEventListener("click", function (ev) {
       var a = ev.target.closest && ev.target.closest('a[href*="amazon."]');
       if (!a) return;

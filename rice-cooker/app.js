@@ -1,7 +1,88 @@
-/* Tiny Pot: countdowns, reveals, fold-card flips, floor finder + fold slip, sticky bar. No trackers. */
+/* Tiny Pot: countdowns, reveals, fold-card flips, floor finder + fold slip, sticky bar. No trackers. Channel attribution may use sessionStorage when ?src=/utm present. */
 (function () {
   var d = document, root = d.documentElement; root.classList.add("js");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Channel attribution: rewrite Amazon tags when src/utm/fbclid says facebook|pinterest|tiktok.
+  // Persist in sessionStorage (wie_channel) so in-site nav keeps attribution. Organic keeps placement tags.
+  (function () {
+    var TAGS = {
+      facebook: "galleyworks-facebook-20",
+      pinterest: "worthitedit-pinterest-20",
+      tiktok: "worthitedit-tiktok-20"
+    };
+    var KEY = "wie_channel";
+    function params() {
+      try { return new URLSearchParams(location.search); } catch (e) { return new URLSearchParams(); }
+    }
+    function norm(v) {
+      v = (v || "").toLowerCase();
+      if (v === "facebook" || v === "fb") return "facebook";
+      if (v === "pinterest" || v === "pin") return "pinterest";
+      if (v === "tiktok" || v === "tt") return "tiktok";
+      return "";
+    }
+    function detect() {
+      var q = params();
+      var fromSrc = norm(q.get("src"));
+      if (fromSrc) return fromSrc;
+      var fromUtm = norm(q.get("utm_source"));
+      if (fromUtm) return fromUtm;
+      // Keep Meta paid_social / fbclid signals (Galley FB ads)
+      var src = (q.get("utm_source") || "").toLowerCase();
+      var med = (q.get("utm_medium") || "").toLowerCase();
+      var camp = (q.get("utm_campaign") || "").toLowerCase();
+      if (med === "paid_social" && (src.indexOf("facebook") > -1 || src.indexOf("fb") > -1 || camp.indexOf("facebook") > -1 || camp.indexOf("fb") > -1)) return "facebook";
+      if (q.get("fbclid")) return "facebook";
+      return "";
+    }
+    var channel = "";
+    try {
+      channel = detect();
+      if (channel) sessionStorage.setItem(KEY, channel);
+      else channel = sessionStorage.getItem(KEY) || "";
+    } catch (e) { channel = detect(); }
+    if (!channel || !TAGS[channel]) return;
+    var TAG = TAGS[channel];
+    function rewrite(href) {
+      if (!href || href.indexOf("amazon.") === -1) return href;
+      if (/([?&])tag=/i.test(href)) {
+        return href.replace(/([?&])tag=[a-z0-9-]+/i, function (_m, p) { return p + "tag=" + TAG; });
+      }
+      return href + (href.indexOf("?") > -1 ? "&" : "?") + "tag=" + TAG;
+    }
+    d.querySelectorAll('a[href*="amazon."]').forEach(function (a) {
+      var h = a.getAttribute("href");
+      if (!h) return;
+      var n = rewrite(h);
+      if (n !== h) { a.setAttribute("href", n); a.setAttribute("data-wie-channel", channel); }
+    });
+    ["gw-data", "picks-data", "data"].forEach(function (id) {
+      var el = d.getElementById(id);
+      if (!el) return;
+      try {
+        var DATA = JSON.parse(el.textContent);
+        function walk(o) {
+          if (!o || typeof o !== "object") return;
+          if (Array.isArray(o)) { o.forEach(walk); return; }
+          Object.keys(o).forEach(function (k) {
+            if (typeof o[k] === "string" && o[k].indexOf("amazon.") > -1) o[k] = rewrite(o[k]);
+            else walk(o[k]);
+          });
+        }
+        walk(DATA);
+        el.textContent = JSON.stringify(DATA);
+      } catch (e) {}
+    });
+    // Keep later quiz CTA writes on the channel tag
+    d.addEventListener("click", function (ev) {
+      var a = ev.target.closest && ev.target.closest('a[href*="amazon."]');
+      if (!a) return;
+      var h = a.getAttribute("href"), n = rewrite(h);
+      if (n !== h) a.setAttribute("href", n);
+    }, true);
+  })();
+
   var now = new Date(), t0 = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
   d.querySelectorAll("[data-countdown]").forEach(function (el) {
     var p = el.getAttribute("data-countdown").split("-"), n = Math.round((Date.UTC(+p[0], +p[1] - 1, +p[2]) - t0) / 864e5);
