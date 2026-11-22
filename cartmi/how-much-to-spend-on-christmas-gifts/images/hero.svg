@@ -1,0 +1,10 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,Roboto,Arial,sans-serif">
+<rect width="640" height="360" rx="22" fill="#fff7ee"/>
+<g stroke="#ead9c4" stroke-width="2"><line x1="70" y1="300" x2="600" y2="300"/><line x1="70" y1="230" x2="600" y2="230" stroke-dasharray="6 8"/><line x1="70" y1="160" x2="600" y2="160" stroke-dasharray="6 8"/><line x1="70" y1="90" x2="600" y2="90" stroke-dasharray="6 8"/></g>
+<rect x="95" y="212" width="86" height="88" rx="10" fill="#176547"/><text x="138" y="200" text-anchor="middle" font-size="24" font-weight="800" fill="#0b3d2a">$683</text><text x="138" y="328" text-anchor="middle" font-size="15" fill="#5c564c">Conference Board</text>
+<rect x="215" y="170" width="86" height="130" rx="10" fill="#12503a"/><text x="258" y="158" text-anchor="middle" font-size="24" font-weight="800" fill="#0b3d2a">$1,011</text><text x="258" y="328" text-anchor="middle" font-size="15" fill="#5c564c">Gallup</text>
+<rect x="335" y="88" width="86" height="212" rx="10" fill="#0b3d2a"/><text x="378" y="76" text-anchor="middle" font-size="24" font-weight="800" fill="#0b3d2a">$1,654</text><text x="378" y="328" text-anchor="middle" font-size="15" fill="#5c564c">Deloitte*</text>
+<rect x="470" y="120" width="96" height="180" rx="12" fill="none" stroke="#c8102e" stroke-width="4" stroke-dasharray="10 8"/><text x="518" y="232" text-anchor="middle" font-size="84" font-weight="900" fill="#c8102e">?</text><text x="518" y="328" text-anchor="middle" font-size="16" font-weight="800" fill="#c8102e">YOU</text>
+<text x="70" y="44" font-size="22" font-weight="800" fill="#0b3d2a">Three 2026 "averages." One real number.</text>
+<text x="600" y="350" text-anchor="end" font-size="11" fill="#5c564c">*Deloitte = whole household, incl. travel &amp; hosting</text>
+</svg>
