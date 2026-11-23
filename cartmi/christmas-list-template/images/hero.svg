@@ -1,0 +1,22 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,Roboto,Arial,sans-serif">
+<rect width="640" height="360" rx="22" fill="#fff7ee"/>
+<text x="320" y="44" text-anchor="middle" font-size="24" font-weight="900" fill="#0b3d2a" letter-spacing="2">FAMILY WISH-LIST DRAFT BOARD</text>
+<g font-size="13" font-weight="800" fill="#fff"><rect x="30" y="62" width="120" height="30" rx="6" fill="#0b3d2a"/><text x="90" y="82" text-anchor="middle">PLAYER · CAP</text>
+<rect x="158" y="62" width="146" height="30" rx="6" fill="#c8102e"/><text x="231" y="82" text-anchor="middle">ROUND 1</text>
+<rect x="312" y="62" width="146" height="30" rx="6" fill="#12503a"/><text x="385" y="82" text-anchor="middle">ROUND 2</text>
+<rect x="466" y="62" width="146" height="30" rx="6" fill="#c9a227"/><text x="539" y="82" text-anchor="middle" fill="#052e1f">BACKUP</text></g>
+<g font-size="14" fill="#1a1814">
+<rect x="30" y="100" width="582" height="56" rx="8" fill="#fff" stroke="#ead9c4"/><text x="42" y="124" font-weight="800">MOM</text><text x="42" y="144" fill="#5c564c">cap $60</text>
+<rect x="164" y="108" width="134" height="40" rx="6" fill="#fdecee"/><text x="172" y="133">Weeknight cookbook</text>
+<rect x="318" y="108" width="134" height="40" rx="6" fill="#e3f1ea"/><text x="326" y="133">Throw blanket</text>
+<rect x="472" y="108" width="134" height="40" rx="6" fill="#fbf4dc"/><text x="480" y="133">Fuzzy slippers 8</text>
+<rect x="30" y="164" width="582" height="56" rx="8" fill="#fff" stroke="#ead9c4"/><text x="42" y="188" font-weight="800">DAD</text><text x="42" y="208" fill="#5c564c">cap $60</text>
+<rect x="164" y="172" width="134" height="40" rx="6" fill="#fdecee"/><text x="172" y="197">Grill tool set</text>
+<rect x="318" y="172" width="134" height="40" rx="6" fill="#e3f1ea"/><text x="326" y="197">Merino socks L</text>
+<rect x="472" y="172" width="134" height="40" rx="6" fill="#fbf4dc"/><text x="480" y="197">Beanie</text>
+<rect x="30" y="228" width="582" height="56" rx="8" fill="#fff" stroke="#ead9c4"/><text x="42" y="252" font-weight="800">MAYA, 9</text><text x="42" y="272" fill="#5c564c">cap $45</text>
+<rect x="164" y="236" width="134" height="40" rx="6" fill="#fdecee"/><text x="172" y="261">LEGO animals, 9+</text>
+<rect x="318" y="236" width="134" height="40" rx="6" fill="#e3f1ea"/><text x="326" y="261">Art markers</text>
+<rect x="472" y="236" width="134" height="40" rx="6" fill="#fbf4dc"/><text x="480" y="261">Chapter book</text></g>
+<g transform="translate(268 300) rotate(-6)"><rect width="150" height="40" rx="8" fill="none" stroke="#c8102e" stroke-width="4"/><text x="75" y="27" text-anchor="middle" font-size="18" font-weight="900" fill="#c8102e">FIRST PICK!</text></g>
+</svg>
