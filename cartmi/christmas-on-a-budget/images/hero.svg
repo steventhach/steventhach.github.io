@@ -1,0 +1,13 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,Menlo,Consolas,monospace">
+<rect width="640" height="360" rx="22" fill="#052e1f"/>
+<rect x="24" y="22" width="592" height="316" rx="14" fill="#0b3d2a" stroke="#176547" stroke-width="2"/>
+<circle cx="50" cy="44" r="7" fill="#c8102e"/><circle cx="72" cy="44" r="7" fill="#c9a227"/><circle cx="94" cy="44" r="7" fill="#3fbf7f"/>
+<text x="320" y="50" text-anchor="middle" font-size="15" fill="#cfe8dc">christmas_v2026.12_patch_notes.txt</text>
+<g font-size="19" font-weight="700">
+<rect x="46" y="76" width="96" height="28" rx="6" fill="#3fbf7f"/><text x="94" y="96" text-anchor="middle" fill="#052e1f">FIXED</text><text x="156" y="97" fill="#fff">Budget is a number, not a vibe</text>
+<rect x="46" y="120" width="96" height="28" rx="6" fill="#c8102e"/><text x="94" y="140" text-anchor="middle" fill="#fff">NERF</text><text x="156" y="141" fill="#fff">"It was on sale" impulse buys</text>
+<rect x="46" y="164" width="96" height="28" rx="6" fill="#c9a227"/><text x="94" y="184" text-anchor="middle" fill="#052e1f">BUFF</text><text x="156" y="185" fill="#fff">Experiences + name draws</text>
+<rect x="46" y="208" width="96" height="28" rx="6" fill="#5c564c"/><text x="94" y="228" text-anchor="middle" fill="#fff">REMOVED</text><text x="156" y="229" fill="#fff">The 11 p.m. 14-tab session</text>
+<rect x="46" y="252" width="96" height="28" rx="6" fill="#fff"/><text x="94" y="272" text-anchor="middle" fill="#052e1f">KNOWN</text><text x="156" y="273" fill="#fff">Shipping cliff: Dec 17–19</text></g>
+<text x="46" y="316" font-size="16" fill="#3fbf7f">&gt; joy.exe still running_</text>
+</svg>
