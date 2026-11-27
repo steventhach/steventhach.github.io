@@ -1,0 +1,36 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+<defs><linearGradient id="hl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3530"/><stop offset="1" stop-color="#26221e"/></linearGradient>
+<linearGradient id="hr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#176547"/><stop offset="1" stop-color="#0b3d2a"/></linearGradient></defs>
+<rect width="640" height="360" rx="22" fill="#052e1f"/>
+<rect x="18" y="18" width="296" height="324" rx="16" fill="url(#hl)"/>
+<text x="166" y="50" text-anchor="middle" font-size="15" font-weight="800" fill="#d8d0c4" letter-spacing="2">THE MALL, A SATURDAY</text>
+<g fill="none" stroke="#8a8276" stroke-width="3" stroke-dasharray="10 8"><ellipse cx="166" cy="104" rx="118" ry="30"/></g>
+<text x="166" y="109" text-anchor="middle" font-size="14" fill="#d8d0c4">parking lap #4</text>
+<g fill="#b9b0a3">
+<circle cx="52" cy="176" r="11"/><rect x="42" y="189" width="20" height="34" rx="8"/>
+<circle cx="86" cy="176" r="11"/><rect x="76" y="189" width="20" height="34" rx="8"/>
+<circle cx="120" cy="176" r="11"/><rect x="110" y="189" width="20" height="34" rx="8"/>
+<circle cx="154" cy="176" r="11"/><rect x="144" y="189" width="20" height="34" rx="8"/>
+<circle cx="188" cy="176" r="11"/><rect x="178" y="189" width="20" height="34" rx="8"/>
+<circle cx="222" cy="176" r="11"/><rect x="212" y="189" width="20" height="34" rx="8"/>
+<circle cx="256" cy="176" r="11"/><rect x="246" y="189" width="20" height="34" rx="8"/></g>
+<rect x="270" y="160" width="30" height="66" rx="4" fill="#5c564c"/><text x="285" y="198" text-anchor="middle" font-size="11" fill="#fff">PAY</text>
+<text x="166" y="252" text-anchor="middle" font-size="14" fill="#d8d0c4">"What does Uncle Ray even like?"</text>
+<g transform="rotate(-12 166 298)"><rect x="76" y="274" width="180" height="46" rx="8" fill="none" stroke="#dc2f45" stroke-width="4"/>
+<text x="166" y="306" text-anchor="middle" font-size="26" font-weight="900" fill="#dc2f45" letter-spacing="3">SKIPPED</text></g>
+<rect x="326" y="18" width="296" height="324" rx="16" fill="url(#hr)"/>
+<text x="474" y="50" text-anchor="middle" font-size="15" font-weight="800" fill="#c9a227" letter-spacing="2">THE COUCH, SAME SATURDAY</text>
+<circle cx="580" cy="86" r="14" fill="#fff7ee" opacity=".9"/><circle cx="586" cy="82" r="12" fill="#176547"/>
+<g fill="#fff" opacity=".85"><circle cx="372" cy="80" r="2.5"/><circle cx="410" cy="100" r="2"/><circle cx="540" cy="120" r="2.5"/><circle cx="452" cy="74" r="2"/></g>
+<rect x="356" y="214" width="236" height="56" rx="14" fill="#c8102e"/>
+<rect x="346" y="190" width="40" height="80" rx="14" fill="#a50f24"/><rect x="562" y="190" width="40" height="80" rx="14" fill="#a50f24"/>
+<rect x="376" y="176" width="196" height="50" rx="14" fill="#dc2f45"/>
+<rect x="370" y="270" width="12" height="18" rx="3" fill="#5c564c"/><rect x="566" y="270" width="12" height="18" rx="3" fill="#5c564c"/>
+<rect x="430" y="84" width="88" height="150" rx="14" fill="#fffdf9" stroke="#c9a227" stroke-width="4"/>
+<rect x="442" y="100" width="64" height="10" rx="5" fill="#0b3d2a"/>
+<rect x="442" y="120" width="64" height="16" rx="5" fill="#e3f1ea"/><rect x="442" y="142" width="64" height="16" rx="5" fill="#e3f1ea"/><rect x="442" y="164" width="64" height="16" rx="5" fill="#e3f1ea"/>
+<rect x="442" y="190" width="64" height="8" rx="4" fill="#ead9c4"/><rect x="442" y="190" width="48" height="8" rx="4" fill="#3fbf7f"/>
+<rect x="442" y="206" width="64" height="16" rx="6" fill="#c8102e"/><text x="474" y="218" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">1 CART</text>
+<rect x="540" y="196" width="22" height="26" rx="5" fill="#fff7ee"/><path d="M562 203 q10 4 0 12" stroke="#fff7ee" stroke-width="4" fill="none"/>
+<text x="474" y="318" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">every list, one cart, under budget</text>
+</svg>
