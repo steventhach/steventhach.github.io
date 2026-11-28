@@ -1,0 +1,10 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,Roboto,Arial,sans-serif">
+<rect width="640" height="360" rx="22" fill="#fff7ee"/>
+<rect x="40" y="28" width="560" height="304" rx="16" fill="#e8dcc4"/><rect x="52" y="38" width="536" height="284" rx="12" fill="#fffdf9" stroke="#c9a227" stroke-width="2"/>
+<line x1="320" y1="38" x2="320" y2="322" stroke="#ead9c4" stroke-width="3"/>
+<text x="186" y="76" text-anchor="middle" font-size="15" font-weight="800" fill="#c8102e" letter-spacing="2">FIELD GUIDE</text>
+<text x="186" y="104" text-anchor="middle" font-size="22" font-weight="900" fill="#0b3d2a">The Dad Who</text><text x="186" y="130" text-anchor="middle" font-size="22" font-weight="900" fill="#0b3d2a">Has Everything</text>
+<g transform="translate(186 220)"><circle cy="-40" r="24" fill="#12503a"/><rect x="-36" y="-14" width="72" height="70" rx="22" fill="#12503a"/><rect x="-44" y="-58" width="88" height="10" rx="5" fill="#c8102e"/><rect x="-26" y="-74" width="52" height="20" rx="8" fill="#c8102e"/><rect x="-40" y="10" width="80" height="34" rx="6" fill="#fff7ee" stroke="#c9a227" stroke-width="2"/><text y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#0b3d2a">SPECIMEN</text></g>
+<g font-size="15" fill="#1a1814"><text x="344" y="82" font-weight="800" fill="#0b3d2a">7 known species:</text>
+<text x="344" y="112">① Grill Sergeant</text><text x="344" y="140">② Gadget Hoarder</text><text x="344" y="168">③ Gamer Dad</text><text x="344" y="196">④ Garage Philosopher</text><text x="344" y="224">⑤ Thermostat Guardian</text><text x="344" y="252">⑥ Weekend Warrior</text><text x="344" y="280">⑦ "I Don't Need Anything"</text></g>
+</svg>
